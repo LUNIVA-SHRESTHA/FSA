@@ -1,0 +1,68 @@
+/* Navigation bar */
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    background: transparent;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Navigation links */
+.nav{
+    font-weight: 700;
+    font-size: 20px;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    padding: 14px 26px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.nav:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+/* Responsive design for navbar */
+@media (max-width: 900px) {
+    .nav-bar {
+        gap: 20px;
+        flex-wrap: wrap;
+        padding: 15px;
+    }
+    
+    .nav {
+        font-size: 18px;
+        padding: 12px 22px;
+        background: rgba(255,255,255,0.1);
+        color: #ffffff;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-bar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    .nav {
+        font-size: 14px;
+        padding: 8px 16px;
+        width: 100%;
+        max-width: 200px;
+        background: rgba(255,255,255,0.1);
+        color: #ffffff;
+    }
+}
