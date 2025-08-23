@@ -1,0 +1,61 @@
+/* Admissions Page Styles */
+body {
+    background-color: #ffffff;
+}
+
+.admission-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.info-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+}
+
+.info-card h3 {
+    color: #16791D;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.info-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-card li {
+    color: #555;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 20px;
+}
+
+.info-card li:before {
+    content: "✓";
+    color: #16791D;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.info-card li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .admission-info {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
