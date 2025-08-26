@@ -26,11 +26,29 @@
 }
 .nav-bar{
     display: flex;
+    justify-content: center;
     align-items: center;
     padding:10px;
-    gap: 9%;
-    margin-left: 15%;
+    gap: 2.5vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
 }
+@media (max-width: 900px) {
+    .nav-bar {
+        gap: 1vw;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+    }
+    .nav-logo {
+        width: 45px;
+        height: 45px;
+        margin: 0 1vw;
+    }
+    .nav {
+        font-size: 1rem;
+    }
+}
+/* ...existing code... */
 .secondpart{
     display: flex;
     gap: 10px;
@@ -51,12 +69,18 @@
     padding-top: 3%;
     gap: 2%;
     line-height: 1.5;
-    height: 400px;
 }
 .fourthpart{
     display: flex;
-    gap: 3%;
+    gap: 5%;
     padding-top: 6%;
     padding-left: 3%;
+}
+.textpart{
+    display: flex;
+    gap: 1%;
+    padding-left: 3%;
+    padding-top: 2%;
+    
 
 }
