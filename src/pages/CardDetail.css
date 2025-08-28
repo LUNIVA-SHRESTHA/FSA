@@ -1,0 +1,61 @@
+/* Card detail page styles for Mission, Vision, Values, Faculty, Facilities */
+.card-detail-page {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  animation: fadeIn 0.8s cubic-bezier(.4,2,.3,1);
+}
+
+.card-detail-page h2 {
+  color: #16791D;
+  font-size: 2.2rem;
+  margin-bottom: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.card-detail-page p {
+  color: #333;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.card-detail-page ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.card-detail-page li {
+  color: #16791D;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 22px;
+}
+
+.card-detail-page li:before {
+  content: "★";
+  color: #f7cac9;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card-detail-page:hover {
+  box-shadow: 0 12px 40px rgba(22,121,29,0.18);
+  transform: scale(1.03);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
