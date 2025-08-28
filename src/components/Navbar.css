@@ -9,6 +9,7 @@
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
+    position: relative;
 }
 
 /* Navigation links */
@@ -49,6 +50,31 @@
         color: #ffffff;
     }
 }
+
+@media (max-width: 600px) {
+    .nav-bar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    .nav {
+        font-size: 14px;
+        padding: 8px 16px;
+        width: 100%;
+        max-width: 200px;
+        background: rgba(255,255,255,0.1);
+        color: #ffffff;
+    }
+}
+       
+    
+    .nav {
+        font-size: 18px;
+        padding: 12px 22px;
+        background: rgba(255,255,255,0.1);
+        color: #ffffff;
+    }
 
 @media (max-width: 600px) {
     .nav-bar {

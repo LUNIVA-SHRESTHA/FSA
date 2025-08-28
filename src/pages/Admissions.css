@@ -2,7 +2,28 @@
 body {
     background-color: #ffffff;
 }
-
+.page-container {
+    width: 100%;
+    overflow-x: hidden;
+}
+.admission-image{
+    background-image: url('./picture/admissions.jpg');
+    background-size: cover;
+    background-position: center;    
+    background-repeat: no-repeat;
+    height: 600px;
+    border-radius: 5%;
+    margin: 20px auto; /* Center the image */
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+.admission-heading{
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 180px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
 .admission-info {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -51,6 +72,18 @@ body {
 
 .info-card li:last-child {
     border-bottom: none;
+}
+
+.full-width-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.mainbody {
+    padding: 2rem;
+    max-width: 100%;
 }
 
 @media (max-width: 768px) {
