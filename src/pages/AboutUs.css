@@ -10,16 +10,122 @@ body {
     margin-top: 40px;
 }
 
-.about-card {
-    background: #fff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+
+/* Flip card styles */
+.about-flip-card {
+    background: transparent;
+    perspective: 1000px;
+    height: 320px;
 }
 
-.about-card:hover {
-    transform: translateY(-10px);
+.about-flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 2s cubic-bezier(.4,2,.3,1);
+    transform-style: preserve-3d;
+}
+
+.about-flip-card:hover .about-flip-card-inner {
+    transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.about-flip-card-front, .about-flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    background: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-flip-card-front h3,
+.about-flip-card-back h3 {
+    color: #16791D;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.about-flip-card-front p,
+.about-flip-card-back p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.about-flip-card-front ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+.about-flip-card-front li {
+    color: #555;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 20px;
+}
+.about-flip-card-front li:before {
+    content: "★";
+    color: #16791D;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+.about-flip-card-front li:last-child {
+    border-bottom: none;
+}
+
+.about-flip-card-back {
+        transform: rotateY(180deg);
+        background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 50%, #fbc2eb 100%);
+        box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
+        backdrop-filter: blur(8px);
+        border: 1.5px solid rgba(255,255,255,0.18);
+        position: relative;
+        overflow: hidden;
+}
+/* Add a subtle animated shine */
+.about-flip-card-back::before {
+        content: "";
+        position: absolute;
+        top: -60%;
+        left: -60%;
+        width: 220%;
+        height: 220%;
+        background: linear-gradient(120deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.08) 100%);
+        transform: rotate(25deg);
+        pointer-events: none;
+        animation: shine 2.5s linear infinite;
+}
+
+@keyframes shine {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+.view-more-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 22px;
+    background: #16791D;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+.view-more-btn:hover {
+    background: #145c16;
 }
 
 .about-card h3 {
