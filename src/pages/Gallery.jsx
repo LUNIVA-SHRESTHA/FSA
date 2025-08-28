@@ -5,11 +5,8 @@ import './Gallery.css';
 const Gallery = () => {
   return (
     <>
-      <div className="mainphoto">
         <Navbar />
-        <h1 className="l1">Gallery</h1>
-      </div>
-      
+        
       <div className="mainbody">
         <div className="content-section">
           <h2>School Life in Pictures</h2>
@@ -33,20 +30,20 @@ const Gallery = () => {
             <div className="gallery-category">
               <h3>Sports & Activities</h3>
               <div className="image-grid">
-                <img src="./picture/sports1.jpg" alt="Football match" />
-                <img src="./picture/sports2.jpg" alt="Basketball game" />
-                <img src="./picture/sports3.jpg" alt="Track and field" />
-                <img src="./picture/sports4.jpg" alt="Swimming competition" />
+                <img src="./picture/gallery5.jpg" alt="Football match" />
+                <img src="./picture/gallery6.jpg" alt="Basketball game" />
+                <img src="./picture/gallery7.jpg" alt="Track and field" />
+                <img src="./picture/gallery8.jpg" alt="Swimming competition" />
               </div>
             </div>
             
             <div className="gallery-category">
               <h3>Events & Celebrations</h3>
               <div className="image-grid">
-                <img src="./picture/event1.jpg" alt="Annual day celebration" />
-                <img src="./picture/event2.jpg" alt="Cultural program" />
-                <img src="./picture/event3.jpg" alt="Science fair" />
-                <img src="./picture/event4.jpg" alt="Graduation ceremony" />
+                <img src="./picture/gallery9.jpg" alt="Annual day celebration" />
+                <img src="./picture/gallery10.jpg" alt="Cultural program" />
+                <img src="./picture/gallery11.jpg" alt="Science fair" />
+                <img src="./picture/gallery12.jpg" alt="Graduation ceremony" />
               </div>
             </div>
           </div>

@@ -4,12 +4,13 @@ import './Admissions.css';
 
 const Admissions = () => {
   return (
-    <>
-      <div className="mainphoto">
+    <div className="page-container">
         <Navbar />
-        <h1 className="l1">Admissions</h1>
-      </div>
-      
+
+      <div className='admission-image'>
+        <h2 className='admission-heading'> Admission process<br/> At Future Stars Academy</h2>
+        </div>
+
       <div className="mainbody">
         <div className="content-section">
           <h2>Join Our School Family</h2>
@@ -34,7 +35,6 @@ const Admissions = () => {
               <ul>
                 <li>Birth certificate</li>
                 <li>Previous school records</li>
-                <li>Medical certificate</li>
                 <li>Passport-sized photographs</li>
               </ul>
             </div>
@@ -43,14 +43,14 @@ const Admissions = () => {
               <ul>
                 <li>Application opens: January 1</li>
                 <li>Application deadline: March 31</li>
-                <li>Entrance exam: April 15</li>
-                <li>Results announced: May 1</li>
+                <li>Entrance exam: Flexible </li>
+                <li>Results announced: Provided on the same day</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

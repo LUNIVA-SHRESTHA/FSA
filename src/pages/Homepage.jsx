@@ -2,6 +2,7 @@ import React from 'react';
 import './Homepage.css'; // Import the CSS file
 import Navbar from '../components/Navbar'; // Import the Navbar component
 
+
 const Homepage = () => {
   return (
     <>
@@ -22,7 +23,7 @@ const Homepage = () => {
             <div className="text">
               <h1>Welcome to</h1>
               <h2>Future Stars Academy</h2>
-              <p>
+              <p style={{fontSize:'21px'}}>
                 We are delighted to have you visit our school's online home. At Future Stars Academy, 
                 we believe that education goes beyond textbooks—it is about nurturing curiosity, building 
                 character, and inspiring lifelong learning. For over 2001, we have been committed to 
@@ -36,7 +37,7 @@ const Homepage = () => {
         </div>
 
         <div className="thirdpart">
-          <p>
+          <p style={{fontSize:'17px'}}>
             At Future Stars, we believe that festivals are a reflection of our rich cultural
             heritage and an opportunity to instill values of unity, respect, and joy among students. 
             Throughout the year, our school celebrates a variety of festivals such as Dashain, Tihar, Holi, 
@@ -79,6 +80,12 @@ const Homepage = () => {
             </div>
           </div>
         </div>
+        <div className="fifthpart">
+          <h2 className='l2'> 40+<br/> Proffesers</h2>
+          <h2 className='l2'> 500+ <br/> Students</h2>
+          <h2 className='l2'> 25+ <br/> Years of Trust</h2>
+
+      </div>
       </div>
     </>
   );

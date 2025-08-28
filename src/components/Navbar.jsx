@@ -5,8 +5,10 @@ import './Navbar.css';
 const Navbar = () => {
   return (
     <nav className="nav-bar" aria-label="Main Navigation">
+      <Link to="/home" className="nav">Home</Link>
       <Link to="/academics" className="nav">Academics</Link>
       <Link to="/admissions" className="nav">Admissions</Link>
+      
       <Link to="/">
         <img 
           src="./picture/logo.png" 
@@ -17,7 +19,8 @@ const Navbar = () => {
         />
       </Link>
       <Link to="/gallery" className="nav">Gallery</Link>
-      <Link to="/about-us" className="nav">About Us</Link>
+      <Link to="/about-us" className="nav">AboutUs</Link>
+      <Link to="/message" className="nav">Message</Link>
     </nav>
   );
 };

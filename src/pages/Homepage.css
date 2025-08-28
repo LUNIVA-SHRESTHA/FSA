@@ -16,7 +16,9 @@
 
 /* Main photo section */
 .mainphoto{
+    animation: backgroundTransition 6s infinite;
     background-image: url("./picture/mainphoto.png");
+    width: 100%;  /* Added width */
     height: 700px;
     background-size: cover;
     background-position: center;
@@ -30,6 +32,24 @@
     align-items: center;
     position: relative;
     padding: 40px 20px;
+    margin-bottom: 30px;  /* Added margin-bottom for spacing */
+}
+
+.mainphoto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 18px;
+    z-index: 0;
+}
+
+.mainphoto * {
+    position: relative;
+    z-index: 1;
 }
 
 /* Navigation bar */
@@ -39,10 +59,11 @@
     justify-content: center;
     gap: 40px;
     padding: 20px;
-    background: transparent;
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
+    background: transparent;
+    position: relative;
 }
 
 /* Navigation links */
@@ -66,6 +87,18 @@
     color: #ffffff;
     text-decoration: none;
     text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+@keyframes backgroundTransition {
+    0%, 30% {
+        background-image: url("./picture/mainphoto.png");
+    }
+    33%, 63% {
+        background-image: url("./picture/secondary.jpg");
+    }
+    66%, 100% {
+        background-image: url("./picture/preprimary.jpg");
+    }
 }
 
 /* Main heading */
@@ -171,12 +204,13 @@
 
 .text{
     padding: 30px;
-    font-size: 18px;
+    font-size: 10px;
     width: 100%;
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     transition: box-shadow 0.3s;
+    
 }
 
 .text:hover {
@@ -334,4 +368,31 @@
         grid-template-columns: 1fr;
         gap: 20px;
     }
+}
+
+.fifthpart{
+    background-image: url("./picture/group.png"); 
+    display: flex;
+    height: 570px;  /* changed from 50vh */
+    width: 100%;    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 4%;
+    border-radius: 15px;  
+    
+}
+.l2{
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 42px;
+    font-family: Inter, Arial, sans-serif;
+    text-align: center;
+    text-shadow: 2px 2px 12px rgba(0,0,0,0.6);
+    transition: color 0.3s;
+    margin: auto 0;
+    padding: 0 75px;
+    padding-top: 100px;
+    line-height: 1.2;
+    max-width: 90%;
 }
