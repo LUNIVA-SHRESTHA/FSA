@@ -1,12 +1,26 @@
+.about-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 32px;
+}
+
+@media (max-width: 900px) {
+    .about-row {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+}
 /* About Us Page Styles */
 body {
     background-color: #ffffff;
 }
 
 .about-sections {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     margin-top: 40px;
 }
 
@@ -15,7 +29,13 @@ body {
 .about-flip-card {
     background: transparent;
     perspective: 1000px;
-    height: 320px;
+    height: 340px;
+    width: 320px;
+    min-width: 320px;
+    max-width: 320px;
+    flex: 0 0 320px;
+    display: flex;
+    align-items: stretch;
 }
 
 .about-flip-card-inner {
@@ -85,14 +105,32 @@ body {
 }
 
 .about-flip-card-back {
-        transform: rotateY(180deg);
-        background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 50%, #fbc2eb 100%);
-        box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
-        backdrop-filter: blur(8px);
-        border: 1.5px solid rgba(255,255,255,0.18);
-        position: relative;
-        overflow: hidden;
+    transform: rotateY(180deg);
+    background: linear-gradient(120deg, #5bc16a 0%, #4a9de2 60%, #fff44f 100%);
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
+    backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(255,255,255,0.18);
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
 }
+.about-flip-card-back h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+    font-weight: 700;
+}
+.about-flip-card-back p {
+    color: #fff;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    font-weight: 500;
+}
+
 /* Add a subtle animated shine */
 .about-flip-card-back::before {
         content: "";
