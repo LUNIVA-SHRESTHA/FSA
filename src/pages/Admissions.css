@@ -38,7 +38,10 @@ body {
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
-
+.admission-image:hover{
+    transform: translateY(-10px);
+    opacity: 0.8;
+}
 .info-card:hover {
     transform: translateY(-10px);
 }

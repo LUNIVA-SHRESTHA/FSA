@@ -21,6 +21,7 @@ const Navbar = () => {
       <Link to="/gallery" className="nav">Gallery</Link>
       <Link to="/about-us" className="nav">AboutUs</Link>
       <Link to="/message" className="nav">Message</Link>
+      <Link to="/staffs" className="nav">Staffs</Link>
     </nav>
   );
 };

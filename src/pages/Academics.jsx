@@ -15,19 +15,8 @@ const Academics = () => {
             designed to challenge and inspire our students. Our curriculum is carefully 
             crafted to meet international standards while incorporating local cultural values.
           </p>
+
               <h3 className='achievements-heading'>Our Achivements </h3>
-              <div className='achievements-section'> 
-              <img src='./picture/achievent1.jpg' alt="" className="" 
-              width={'450px'} height={'300px'} style={{borderRadius:"10px"}}/>
-              <p> We proudly congratulate for securing a perfect 4.0 GPA in the Grade 10 examination.
-              This remarkable accomplishment reflects your hard work, dedication, and commitment to 
-              academic excellence. Your success is an inspiration to your peers and a source of pride 
-              for the entire school community.With a strong commitment to academic excellence, innovative 
-              teaching methods, and personalized mentoring, Future Star continues to nurture well-rounded 
-              learners who are prepared to succeed in their future endeavors. 🌟📚</p>
-            </div>
-
-
             <div className='achievements-sectionone'>
               <img src='./picture/ach1.jpg' alt="" className="" 
               width={'300px'} height={'330px'} style={{borderRadius:"10px"}}/>
@@ -35,9 +24,9 @@ const Academics = () => {
               width={'300px'} height={'330px'} style={{borderRadius:"10px"}}/>
               <img src='./picture/ach4.jpg' alt="" className="" 
               width={'300px'} height={'330px'} style={{borderRadius:"10px"}}/>
-
             </div>
           
+          <h3 className='achievements-heading'>Faculty Excellence</h3>
           <div className="academic-features">
             <div className="feature">
               <h3>Pre-primary/ Early Childhood </h3>
@@ -83,8 +72,24 @@ const Academics = () => {
                 <li>🌍 Opportunities for leadership, debate, sports, and community service.</li>
               </ul>
             </div>
-            
           </div>
+
+          <div className='achievements-section'> 
+            <h3 className='achievements-heading'>Student Sucess Stories</h3>
+              <img src='./picture/achievent1.jpg' alt="" className="" 
+              width={'450px'} height={'300px'} style={{borderRadius:"10px"}}/>
+              <p> We proudly congratulate for securing a perfect 4.0 GPA in the Grade 10 examination.
+              This remarkable accomplishment reflects your hard work, dedication, and commitment to 
+              academic excellence. Your success is an inspiration to your peers and a source of pride 
+              for the entire school community.With a strong commitment to academic excellence, innovative 
+              teaching methods, and personalized mentoring, Future Star continues to nurture well-rounded 
+              learners who are prepared to succeed in their future endeavors. 🌟📚</p>
+            </div>
+
+
+
+
+
         </div>
       </div>
     </>
