@@ -19,11 +19,12 @@ const Footnote = () => {
 
         <div className='contact-info'>
         <h2>  Quick Lines   </h2>
-        <p>Admissions</p>
-        <p>Notices/News</p>
-        <p>Calender/Events</p>
-        <p>Exam portal</p>
+        <Link to="/admissions" >Admissions</Link>
+        <Link to="/notice/news" >Work at FSA</Link>
+        <Link to="/calendar" >Calender/Events</Link>
+        <Link to="/exam/portal" >Exam portal</Link>
         </div>
+        
 
          <div className='contact-info'>
         <h2>  Follow us  </h2>

@@ -12,11 +12,15 @@ import Faculty from './pages/Faculty';
 import Facilities from './pages/Facilities';
 import Navbar from './components/Navbar';
 import Footnote from './components/Footnote';
+import Calendar from './pages/Calendar';
+import Staff from './pages/Staff';
+import Work from './pages/Work';
 
 import './App.css';
 
 function App() {
   return (
+
     <Router>
       <div className="App">
         
@@ -27,13 +31,16 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/home" element={<Homepage />} />
+          <Route path="/calender/events" element={<Homepage />} />
           <Route path="/about-us/mission" element={<Mission />} />
           <Route path="/about-us/vision" element={<Vision />} />
           <Route path="/about-us/values" element={<Values />} />
           <Route path="/about-us/faculty" element={<Faculty />} />
           <Route path="/about-us/facilities" element={<Facilities />} />
-      
-    
+          <Route path="/calendar" element={<Calendar/>} />
+          <Route path="/staff" element={<Staff/>} />
+          <Route path="/work" element={<Work/>} />
+          
         </Routes>
       </div>
       <Footnote />

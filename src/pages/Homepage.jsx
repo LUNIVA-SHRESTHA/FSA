@@ -81,9 +81,11 @@ const Homepage = () => {
           </div>
         </div>
         <div className="fifthpart">
+          
           <h2 className='l2'> 40+<br/> Proffesers</h2>
           <h2 className='l2'> 500+ <br/> Students</h2>
-          <h2 className='l2'> 25+ <br/> Years of Trust</h2>
+          <h2 className='l2'> 24+ <br/> Years of Trust</h2>
+         
 
       </div>
       </div>
