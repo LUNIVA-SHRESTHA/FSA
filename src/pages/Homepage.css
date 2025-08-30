@@ -258,6 +258,87 @@
     }
 }
 
+/* Video Tour Section */
+.video-tour-section {
+    padding: 60px 5% 60px 8%;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    text-align: center;
+    margin: 40px 0;
+    border-radius: 15px;
+}
+
+.tour-heading {
+    color: #16791D;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.tour-description {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.tour-video {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tour-video:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 900px) {
+    .video-tour-section {
+        padding: 40px 3%;
+        margin: 20px 0;
+    }
+    
+    .tour-heading {
+        font-size: 28px;
+    }
+    
+    .tour-description {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    
+    .tour-video {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .video-tour-section {
+        padding: 30px 2%;
+    }
+    
+    .tour-heading {
+        font-size: 24px;
+    }
+    
+    .tour-description {
+        font-size: 14px;
+    }
+}
+
 /* Third part styles */
 .thirdpart{
     display: flex;

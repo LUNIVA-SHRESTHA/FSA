@@ -1,9 +1,49 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Homepage.css'; // Import the CSS file
 import Navbar from '../components/Navbar'; // Import the Navbar component
 
 
 const Homepage = () => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          video.play().catch((error) => {
+            console.log('Video autoplay failed:', error);
+            // Fallback: show controls if autoplay fails
+            video.setAttribute('controls', 'true');
+          });
+        } else {
+          video.pause();
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0.3,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    observer.observe(video);
+
+    // Also try to play when video is loaded
+    video.addEventListener('loadedmetadata', () => {
+      if (video.offsetParent !== null) { // Check if visible
+        video.play().catch(() => {
+          video.setAttribute('controls', 'true');
+        });
+      }
+    });
+
+    return () => {
+      observer.unobserve(video);
+    };
+  }, []);
   return (
     <>
       <div className="mainphoto">
@@ -33,6 +73,28 @@ const Homepage = () => {
                 life as responsible, compassionate, and innovative citizens of tomorrow.
               </p>
             </div>
+          </div>
+        </div>
+
+        <div className="video-tour-section">
+          <h2 className="tour-heading">Take a Virtual Tour of Our School</h2>
+          <p className="tour-description">
+            Explore our beautiful campus, modern facilities, and vibrant learning environment 
+            through this virtual tour of Future Stars Academy.
+          </p>
+          <div className="video-container">
+            <video 
+              ref={videoRef}
+              className="tour-video" 
+              muted
+              loop
+              playsInline
+              poster="./picture/mainphoto.png"
+              preload="auto"
+            >
+              <source src="./video/Tour.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
 
