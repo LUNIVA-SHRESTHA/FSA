@@ -18,12 +18,24 @@ const Academics = () => {
 
               <h3 className='achievements-heading'>Our Achivements </h3>
             <div className='achievements-sectionone'>
-              <img src='./picture/ach1.jpg' alt="" className="" 
-              width={'300px'} height={'330px'} style={{borderRadius:"10px"}}/>
-              <img src='./picture/ach2.jpg' alt="" className="" 
-              width={'300px'} height={'330px'} style={{borderRadius:"10px"}}/>
-              <img src='./picture/ach4.jpg' alt="" className="" 
-              width={'300px'} height={'330px'} style={{borderRadius:"10px"}}/>
+              <div className="achievement-image-container">
+                <img src='./picture/ach1.jpg' alt="" className="achievement-image-main" 
+                width={'300px'} height={'330px'} style={{borderRadius:"10px"}}/>
+                <img src='./picture/new.jpeg' alt="" className="achievement-image-hover" 
+                width={'300px'} height={'330px'} style={{borderRadius:"10px"}}/>
+              </div>
+              <div className="achievement-image-container">
+                <img src='./picture/ach2.jpg' alt="" className="achievement-image-main" 
+                width={'300px'} height={'330px'} style={{borderRadius:"10px"}}/>
+                <img src='./picture/ach5Mumbai.jpeg' alt="" className="achievement-image-hover" 
+                width={'300px'} height={'330px'} style={{borderRadius:"10px"}}/>
+              </div>
+              <div className="achievement-image-container">
+                <img src='./picture/ach4.jpg' alt="" className="achievement-image-main" 
+                width={'300px'} height={'330px'} style={{borderRadius:"10px"}}/>
+                <img src='./picture/diya.jpg' alt="" className="achievement-image-hover" 
+                width={'300px'} height={'330px'} style={{borderRadius:"10px"}}/>
+              </div>
             </div>
           
           <h3 className='achievements-heading'>Faculty Excellence</h3>
@@ -76,8 +88,12 @@ const Academics = () => {
 
           <div className='achievements-section'> 
             <h3 className='achievements-heading'>Student Sucess Stories</h3>
-              <img src='./picture/achievent1.jpg' alt="" className="" 
+            <div className="achievement-image-container">
+              <img src='./picture/achievent1.jpg' alt="" className="achievement-image-main" 
               width={'450px'} height={'300px'} style={{borderRadius:"10px"}}/>
+              <img src='./picture/diya.jpg' alt="" className="achievement-image-hover" 
+              width={'350px'} height={'300px'} style={{borderRadius:"10px"}}/>
+            </div>
               <p> We proudly congratulate for securing a perfect 4.0 GPA in the Grade 10 examination.
               This remarkable accomplishment reflects your hard work, dedication, and commitment to 
               academic excellence. Your success is an inspiration to your peers and a source of pride 

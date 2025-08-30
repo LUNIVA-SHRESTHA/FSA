@@ -28,6 +28,31 @@ body {
     width: 90%;
     font-size: large;
 }
+
+.achievement-image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.achievement-image-main,
+.achievement-image-hover {
+    transition: opacity 0.3s ease;
+}
+
+.achievement-image-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.achievement-image-container:hover .achievement-image-hover {
+    opacity: 1;
+}
+
+.achievement-image-container:hover .achievement-image-main {
+    opacity: 0;
+}
 .achievements-sectionone{
     margin-top: 4%;
     display: flex;
