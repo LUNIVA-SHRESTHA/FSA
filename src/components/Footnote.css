@@ -1,11 +1,10 @@
 .footnote{
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    margin-top: 6px;
+    align-items: flex-start;
+    padding: 20px;
     background-color: #D9D9D9;
-    height: 300px;
-    gap: 2%;
+    color: black;
 }
 .container-footnote{
     display: flex;
@@ -15,5 +14,23 @@
 .contact-info{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    gap: 10px;
+}
+.contact-info h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+.contact-info a, 
+.contact-info p {
+    text-decoration: none;
+    color: black;
+    margin: 5px 0;
+}
+.contact-info a:hover {
+    opacity: 0.7;
+}
+.QL{
+    text-decoration: none;
+    color: white;
 }

@@ -8,10 +8,13 @@ const Staff = () => {
     <>
         <Navbar />
         <h1 className="staff-heading">Our Dedicated Staff</h1>
-        <p className="staff-intro">At Future Stars Academy, our team of qualified and passionate 
+        <img src='./picture/Staff-mainphoto.jpg' alt="Staff" className="staff-image"/>
+        <p className="staffintro">At Future Stars Academy, our team of qualified and passionate 
         educators is committed to guiding students with care, knowledge, and inspiration. 
         Supported by our staff, they create a positive and engaging learning environment where
         every child can grow and succeed.</p>
+       
+        
         
     </>
   );
