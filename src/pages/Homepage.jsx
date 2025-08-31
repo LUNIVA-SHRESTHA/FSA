@@ -46,8 +46,8 @@ const Homepage = () => {
   }, []);
   return (
     <>
+      <Navbar />
       <div className="mainphoto">
-        <Navbar />
         <h1 className="l1">"Where Every Child's Potential is Celebrated."</h1>
       </div>
 
