@@ -592,7 +592,7 @@ body {
 }
 
 .fifthpart{
-    background-image: url("./picture/group.png"); 
+    background-image: url("./picture/background-photo.jpg"); 
     display: flex;
     height: 570px;  /* changed from 50vh */
     width: 100%;    
@@ -604,7 +604,7 @@ body {
     
 }
 .l2{
-    color: #ffffff;
+    color:#F5F5F5;
     font-weight: 800;
     font-size: 42px;
     font-family: Inter, Arial, sans-serif;

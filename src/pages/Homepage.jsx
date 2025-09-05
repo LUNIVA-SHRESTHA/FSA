@@ -77,7 +77,7 @@ const Homepage = () => {
         </div>
 
         <div className="video-tour-section">
-          <h2 className="tour-heading">Take a Virtual Tour of Our School</h2>
+          <h2 className="tour-heading">Virtual Tour of Our School</h2>
           <p className="tour-description">
             Explore our beautiful campus, modern facilities, and vibrant learning environment 
             through this virtual tour of Future Stars Academy.
@@ -120,25 +120,29 @@ const Homepage = () => {
           <div className="image-container">
             <img src="./picture/quiz.png" alt="Quiz competition" />
             <div className="caption">
-              Our school organizes quiz competitions to encourage curiosity, critical thinking, and teamwork among students.
+              Our school organizes quiz competitions to encourage curiosity, critical thinking, and 
+              teamwork among students.
             </div>
           </div>
           <div className="image-container">
             <img src="./picture/environmentday.png" alt="Environment Day" />
             <div className="caption">
-              We celebrate Environment Day by tree planting, with students' participation to promote a greener and healthier future.
+              We celebrate Environment Day by tree planting, with students' participation to promote a 
+              greener and healthier future.
             </div>
           </div>
           <div className="image-container">
             <img src="./picture/kindergardenGraduation.png" alt="Kindergarten Graduation" />
             <div className="caption">
-              Our Kindergarten Graduation celebrates the young learners as they proudly transition from early childhood education.
+              Our Kindergarten Graduation celebrates the young learners as they proudly transition from 
+              early childhood education.
             </div>
           </div>
           <div className="image-container">
             <img src="./picture/kids.png" alt="Junior student activities" />
             <div className="caption">
-              Our junior students engage in fun and educational extra curricular activities that help them explore talents.
+              Our junior students engage in fun and educational extra curricular activities that help them 
+              explore talents.
             </div>
           </div>
         </div>

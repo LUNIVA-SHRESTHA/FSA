@@ -86,15 +86,15 @@ const Academics = () => {
             </div>
           </div>
 
-          <div className='achievements-section'> 
-            <h3 className='achievements-heading'>Student Sucess Stories</h3>
+          <h3 className='achievements-heading'>Student Sucess Stories</h3>
+          <div className='achievements-sectiontwo'>
             <div className="achievement-image-container">
               <img src='./picture/achievent1.jpg' alt="" className="achievement-image-main" 
-              width={'450px'} height={'300px'} style={{borderRadius:"10px"}}/>
+              width={'480px'} height={'400px'} style={{borderRadius:"10px"}}/>
               <img src='./picture/diya.jpg' alt="" className="achievement-image-hover" 
-              width={'350px'} height={'300px'} style={{borderRadius:"10px"}}/>
+              width={'390px'} height={'430px'} style={{borderRadius:"10px"}}/>
             </div>
-              <p> We proudly congratulate for securing a perfect 4.0 GPA in the Grade 10 examination.
+              <p className='achievements-sectionpara'> We proudly congratulate for securing a perfect 4.0 GPA in the Grade 10 examination.
               This remarkable accomplishment reflects your hard work, dedication, and commitment to 
               academic excellence. Your success is an inspiration to your peers and a source of pride 
               for the entire school community.With a strong commitment to academic excellence, innovative 
