@@ -39,7 +39,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 15px 0;
-    position: relative;
 }
 
 .nav-logo {
@@ -50,7 +49,6 @@
     color: var(--dark-navy);
     font-weight: 700;
     font-size: 1.3rem;
-    flex-shrink: 0;
 }
 
 .logo-icon {
@@ -65,28 +63,11 @@
     font-size: 1.2rem;
 }
 
-.logo-image {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    object-fit: cover;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.logo-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 60px;
+    gap: 40px;
     align-items: center;
-    flex: 1;
-    justify-content: center;
-    margin: 0 20px;
 }
 
 .nav-link {
@@ -141,11 +122,6 @@
 .nav-cta:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
-}
-
-.nav-spacer {
-    width: 120px; /* Approximate width of the removed CTA button */
-    flex-shrink: 0;
 }
 
 .mobile-menu-toggle {
@@ -227,10 +203,6 @@
     }
 
     .nav-cta {
-        display: none;
-    }
-
-    .nav-spacer {
         display: none;
     }
 
