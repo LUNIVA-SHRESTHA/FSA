@@ -1,8 +1,12 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import './Calendar.css';
+import useScrollToTop from '../hooks/useScrollToTop';
 
 const Calendar= () => {
+  // Use the custom hook to scroll to top
+  useScrollToTop();
+  
   return (
     <div>
       <Navbar />

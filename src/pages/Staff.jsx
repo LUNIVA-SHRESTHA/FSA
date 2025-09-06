@@ -2,8 +2,12 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footnote from '../components/Footnote';
 import './Staff.css';
+import useScrollToTop from '../hooks/useScrollToTop';
 
 const Staff = () => {
+  // Use the custom hook to scroll to top
+  useScrollToTop();
+  
   return (
     <>
         <Navbar />

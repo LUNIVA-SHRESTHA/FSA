@@ -1,10 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 import './Homepage.css'; // Import the CSS file
 import Navbar from '../components/Navbar'; // Import the Navbar component
+import useScrollToTop from '../hooks/useScrollToTop'; // Import the custom hook
 
 
 const Homepage = () => {
   const videoRef = useRef(null);
+
+  // Use the custom hook to scroll to top
+  useScrollToTop();
 
   useEffect(() => {
     const video = videoRef.current;

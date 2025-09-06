@@ -2,8 +2,12 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footnote from '../components/Footnote';
 import './Work.css';
+import useScrollToTop from '../hooks/useScrollToTop';
 
 const Work = () => {
+  // Use the custom hook to scroll to top
+  useScrollToTop();
+  
   return (
     <>
         <Navbar />

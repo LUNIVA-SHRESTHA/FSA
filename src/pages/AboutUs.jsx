@@ -1,9 +1,13 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import './AboutUs.css';
+import useScrollToTop from '../hooks/useScrollToTop';
 
 const AboutUs = () => {
   const [selectedCard, setSelectedCard] = React.useState(null);
+  
+  // Use the custom hook to scroll to top
+  useScrollToTop();
   const extraContents = {
     'Our Mission': (
       <div className="card-extra-details">

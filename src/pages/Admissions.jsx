@@ -1,8 +1,12 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import './Admissions.css';
+import useScrollToTop from '../hooks/useScrollToTop';
 
 const Admissions = () => {
+  // Use the custom hook to scroll to top
+  useScrollToTop();
+  
   return (
     <div className="page-container">
         <Navbar />

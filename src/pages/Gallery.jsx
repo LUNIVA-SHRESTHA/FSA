@@ -1,8 +1,12 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import './Gallery.css';
+import useScrollToTop from '../hooks/useScrollToTop';
 
 const Gallery = () => {
+  // Use the custom hook to scroll to top
+  useScrollToTop();
+  
   return (
     <>
         <Navbar />
