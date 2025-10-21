@@ -28,10 +28,9 @@ const AboutUs = () => {
   };
   return (
     <>
-      <div className="mainphoto">
+      
         <Navbar />
-        <h1 className="l1">About Us</h1>
-      </div>
+      
       <div className="mainbody">
         <div className="content-section">
           <h2>Our Story</h2>

@@ -11,7 +11,8 @@ const Work = () => {
   return (
     <>
         <Navbar />
-        <h1 className="work-heading">Our Work Environment</h1>
+        <div className='mainbody'>
+        <h1 className="work-heading">Work With Us </h1>
         <p className='work-para'>Our Work at FSA page highlights current opportunities to join our team of educators and 
         staff who are committed to providing quality education and a nurturing environment for every 
         student. Whether you are an experienced teacher or a professional eager to contribute to school 
@@ -23,6 +24,7 @@ const Work = () => {
           <img src='./picture/vacancy3.jpg' alt=''/>
 
 
+        </div>
         </div>
         
     </>

@@ -49,13 +49,16 @@ const Navbar = () => {
           Future Stars Academy
         </Link>
         
+        <div className="nav-spacer-logo"></div>
+        
         <ul className="nav-menu">
           <li><Link to="/" className="nav-link">Home</Link></li>
-          <li><Link to="/about-us" className="nav-link">About</Link></li>
-          <li><Link to="/academics" className="nav-link">Programs</Link></li>
-          <li><Link to="/admissions" className="nav-link">Admissions</Link></li>
+          <li><Link to="/academics" className="nav-link">Academics</Link></li>
+          <li><Link to="/Introduction" className="nav-link">Introduction</Link></li>
+          <li><Link to="/download" className="nav-link">Download</Link></li>
           <li><Link to="/gallery" className="nav-link">Gallery</Link></li>
-          <li><Link to="/staff" className="nav-link">Staff</Link></li>
+          <li><Link to="/about-us" className="nav-link">About</Link></li>
+          <li><Link to="/message" className="nav-link">Message</Link></li>
         </ul>
         
         <div className="nav-spacer"></div>
