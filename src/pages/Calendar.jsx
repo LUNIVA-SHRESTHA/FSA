@@ -10,6 +10,7 @@ const Calendar= () => {
   return (
     <div>
       <Navbar />
+      <div className='mainbody'>
       <h3 className='Calendar'>School Calendar</h3>
       <p className='Calendar-para'>Our school calendar keeps students, parents, and teachers informed about 
       important academic dates, examinations, holidays, and upcoming events. From classroom 
@@ -25,6 +26,7 @@ const Calendar= () => {
       <img src='./picture/cal6.jpg' alt='calender' className='Calendar-image' style={{width:'350px', height:'500px'}}/>
       </div>
 
+    </div>
     </div>
   );
 };

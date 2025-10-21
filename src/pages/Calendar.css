@@ -1,8 +1,9 @@
 .Calendar{
     text-align: center;
-    margin-top: 20px;
-    font-size: 26px;
+    
+    font-size: 36px;
     color: #16791D;
+    margin-top: 4%;
 }
 .Calendar-para{
     text-align: center;

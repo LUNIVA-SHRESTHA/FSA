@@ -1,7 +1,7 @@
 .work-heading {
     text-align: center;
     font-size: 36px;
-    margin-top: 20px;
+    margin-top: 5%;
     color: #16791D;
 }
 .work-para{
@@ -23,4 +23,5 @@
     border: 4px double black;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    height: 380px;
 }

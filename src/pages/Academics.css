@@ -2,13 +2,16 @@
 body {
     background-color: #ffffff;
 }
-
+.mainbody{
+    margin-top: 3%;
+}
 
 .content-section {
     padding: 60px 5%;
     max-width: 1200px;
     margin: 0 auto;
     background-color: #ffffff;
+    
 }
 .achievements-heading{
     

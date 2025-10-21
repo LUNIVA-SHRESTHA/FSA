@@ -12,8 +12,8 @@ const Staff = () => {
     <>
         <Navbar />
 
-        
-        <h1 className="staff-heading">Our Dedicated Staff</h1>
+        <div className='mainbody'>
+        <h2 className="staff-heading">Our Dedicated Staff</h2>
         <img src='./picture/Staff-mainphoto.jpg' alt="Staff" className="staff-image"/>
         <p className="staffintro">At Future Stars Academy, our team of qualified and passionate 
         educators is committed to guiding students with care, knowledge, and inspiration. 
@@ -22,6 +22,7 @@ const Staff = () => {
 
         <div className='PrimaryStaff'>
           <h2>Our Dedicated Primary Teachers</h2>
+          </div>
           </div>
 
         

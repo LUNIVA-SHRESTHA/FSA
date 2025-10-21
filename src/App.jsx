@@ -15,6 +15,7 @@ import Footnote from './components/Footnote';
 import Calendar from './pages/Calendar';
 import Staff from './pages/Staff';
 import Work from './pages/Work';
+import Introduction from './pages/Introduction';
 
 import './App.css';
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/academics" element={<Academics />} />
           <Route path="/admissions" element={<Admissions />} />
+          <Route path="/introduction" element={<Introduction />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/home" element={<Homepage />} />

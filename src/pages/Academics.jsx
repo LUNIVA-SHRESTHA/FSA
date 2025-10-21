@@ -13,7 +13,7 @@ const Academics = () => {
 
       <div className="mainbody">
         <div className="content-section">
-          <h2>Academic Excellence</h2>
+          <h2 >Academic Excellence</h2>
           <p>
             At Future Stars Academy, we provide a comprehensive academic program 
             designed to challenge and inspire our students. Our curriculum is carefully 
