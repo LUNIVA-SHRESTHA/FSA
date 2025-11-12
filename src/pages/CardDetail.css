@@ -22,7 +22,7 @@
 }
 
 .card-detail-page h2 {
-  color: #16791D;
+  background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   font-size: 2.2rem;
   margin-bottom: 18px;
   text-align: center;
@@ -46,7 +46,7 @@
 }
 
 .card-detail-page li {
-  color: #16791D;
+  background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   font-size: 1.1rem;
   margin-bottom: 8px;
   position: relative;

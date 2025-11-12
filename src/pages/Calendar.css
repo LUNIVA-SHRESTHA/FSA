@@ -2,7 +2,7 @@
     text-align: center;
     
     font-size: 36px;
-    color: #16791D;
+    background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     margin-top: 4%;
 }
 .Calendar-para{

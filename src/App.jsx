@@ -16,6 +16,7 @@ import Calendar from './pages/Calendar';
 import Staff from './pages/Staff';
 import Work from './pages/Work';
 import Introduction from './pages/Introduction';
+import Contact from './pages/Contact';
 
 import './App.css';
 
@@ -32,6 +33,7 @@ function App() {
           <Route path="/introduction" element={<Introduction />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/home" element={<Homepage />} />
           <Route path="/calender/events" element={<Homepage />} />
           <Route path="/about-us/mission" element={<Mission />} />

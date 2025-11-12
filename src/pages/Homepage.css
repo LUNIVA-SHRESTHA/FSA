@@ -30,7 +30,7 @@ body {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 20% 80%, rgba(22, 121, 29, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(220, 38, 38, 0.05) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(52, 152, 219, 0.05) 0%, transparent 50%);
     pointer-events: none;
     z-index: 0;
@@ -45,9 +45,9 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 18px;
+    border-radius: 0 !important;
     box-shadow: 
-        0 8px 32px rgba(22, 121, 29, 0.15),
+        0 8px 32px rgba(220, 38, 38, 0.15),
         0 4px 16px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     display: flex;
@@ -57,7 +57,7 @@ body {
     position: relative;
     padding: 40px 20px;
     margin-bottom: 40px;
-    border: 1px solid rgba(22, 121, 29, 0.1);
+    border: none;
     z-index: 1;
 }
 
@@ -69,8 +69,8 @@ body {
     right: 0;
     bottom: 0;
     background: 
-        linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(22, 121, 29, 0.2));
-    border-radius: 18px;
+        linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(220, 38, 38, 0.2));
+    border-radius: 0;
     z-index: 0;
 }
 
@@ -143,20 +143,18 @@ body {
     text-align: center;
     text-shadow: 
         0 2px 4px rgba(0, 0, 0, 0.6),
-        0 4px 8px rgba(22, 121, 29, 0.3);
+        0 4px 8px rgba(220, 38, 38, 0.3);
     transition: all 0.3s ease;
     margin: auto 0;
-    padding: 0 20px;
+    padding: 30px 50px;
     line-height: 1.2;
-    max-width: 90%;
+    max-width: 80%;
     letter-spacing: 1px;
-}
-
-.l1:hover {
-    transform: translateY(-2px);
-    text-shadow: 
-        0 4px 8px rgba(0, 0, 0, 0.7),
-        0 6px 12px rgba(22, 121, 29, 0.4);
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(25px) !important;
+    -webkit-backdrop-filter: blur(25px) !important;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive design */
@@ -179,6 +177,7 @@ body {
     
     .l1 {
         font-size: 40px;
+        padding: 25px 40px;
     }
     
     .nav {
@@ -212,23 +211,25 @@ body {
     
     .l1 {
         font-size: 32px;
+        padding: 20px 30px;
     }
 }
 
 /* Second part styles */
 .secondpart{
     display: flex;
-    gap: 40px;
+    flex-direction: row-reverse;
+    gap: 30px;
     padding: 60px 5% 60px 8%;
     line-height: 1.6;
-    align-items: flex-start;
+    align-items: center;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.9) 100%);
     border-radius: 20px;
     margin: 20px 0;
-    border: 1px solid rgba(22, 121, 29, 0.1);
+    border: 1px solid rgba(220, 38, 38, 0.1);
     box-shadow: 
         0 8px 32px rgba(0, 0, 0, 0.1),
-        0 4px 16px rgba(22, 121, 29, 0.05);
+        0 4px 16px rgba(220, 38, 38, 0.05);
     backdrop-filter: blur(10px);
     position: relative;
     z-index: 1;
@@ -241,28 +242,28 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 50% 50%, rgba(22, 121, 29, 0.03) 0%, transparent 70%);
+    background: radial-gradient(circle at 50% 50%, rgba(220, 38, 38, 0.03) 0%, transparent 70%);
     border-radius: 20px;
     z-index: -1;
 }
 
 .secondpart img {
-    border-radius: 15px;
+    border-radius: 30px;
     box-shadow: 
         0 8px 30px rgba(0, 0, 0, 0.15),
-        0 4px 15px rgba(22, 121, 29, 0.1);
+        0 4px 15px rgba(220, 38, 38, 0.1);
     transition: all 0.4s ease;
     max-width: 100%;
-    height: auto;
-    border: 1px solid rgba(22, 121, 29, 0.1);
+    /* height: ; */
+    border: 1px solid rgba(220, 38, 38, 0.1);
 }
 
 .secondpart img:hover {
     transform: scale(1.03) translateY(-5px);
     box-shadow: 
         0 15px 40px rgba(0, 0, 0, 0.2),
-        0 8px 20px rgba(22, 121, 29, 0.15);
-    border-color: rgba(22, 121, 29, 0.3);
+        0 8px 20px rgba(220, 38, 38, 0.15);
+    border-color: rgba(220, 38, 38, 0.3);
 }
 
 @media (max-width: 900px) {
@@ -281,9 +282,9 @@ body {
     border-radius: 20px;
     box-shadow: 
         0 8px 32px rgba(0, 0, 0, 0.1),
-        0 4px 16px rgba(22, 121, 29, 0.05);
+        0 4px 16px rgba(220, 38, 38, 0.05);
     transition: all 0.4s ease;
-    border: 1px solid rgba(22, 121, 29, 0.1);
+    border: 1px solid rgba(220, 38, 38, 0.1);
     backdrop-filter: blur(10px);
     position: relative;
     overflow: hidden;
@@ -296,7 +297,7 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(22, 121, 29, 0.05), transparent);
+    background: linear-gradient(90deg, transparent, rgba(220, 38, 38, 0.05), transparent);
     transition: left 0.6s ease;
 }
 
@@ -307,17 +308,17 @@ body {
 .text:hover {
     box-shadow: 
         0 12px 40px rgba(0, 0, 0, 0.15),
-        0 6px 20px rgba(22, 121, 29, 0.1);
+        0 6px 20px rgba(220, 38, 38, 0.1);
     transform: translateY(-3px);
-    border-color: rgba(22, 121, 29, 0.2);
+    border-color: rgba(220, 38, 38, 0.2);
 }
 
 .text h1 {
-    color: #16791D;
+    background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     font-size: 32px;
     margin-bottom: 10px;
     font-weight: 700;
-    text-shadow: 0 2px 4px rgba(22, 121, 29, 0.2);
+    text-shadow: 0 2px 4px rgba(220, 38, 38, 0.2);
     letter-spacing: 1px;
 }
 
@@ -358,11 +359,11 @@ body {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.9) 50%, rgba(233, 236, 239, 0.9) 100%);
     text-align: center;
     margin: 40px 0;
-    border-radius: 25px;
-    border: 1px solid rgba(22, 121, 29, 0.1);
+    /* border-radius: 25px; */
+    border: 1px solid rgba(220, 38, 38, 0.1);
     box-shadow: 
         0 12px 40px rgba(0, 0, 0, 0.1),
-        0 6px 20px rgba(22, 121, 29, 0.05);
+        0 6px 20px rgba(220, 38, 38, 0.05);
     backdrop-filter: blur(15px);
     position: relative;
     overflow: hidden;
@@ -376,20 +377,27 @@ body {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 30% 70%, rgba(22, 121, 29, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 30% 70%, rgba(220, 38, 38, 0.05) 0%, transparent 50%),
         radial-gradient(circle at 70% 30%, rgba(52, 152, 219, 0.03) 0%, transparent 50%);
     z-index: 0;
 }
 
 .tour-heading {
-    color: #16791D;
+    background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     font-size: 42px;
     font-weight: 800;
     margin-bottom: 20px;
-    text-shadow: 0 2px 4px rgba(22, 121, 29, 0.2);
+    text-shadow: 0 2px 4px rgba(220, 38, 38, 0.2);
     letter-spacing: 1px;
     position: relative;
     z-index: 1;
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    padding: 20px 40px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .tour-description {
@@ -403,6 +411,12 @@ body {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1;
+    background: rgba(255, 255, 255, 0.65) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .video-container {
@@ -418,20 +432,19 @@ body {
     width: 100%;
     max-width: 800px;
     height: auto;
-    border-radius: 20px;
+    border-radius: 0 !important;
     box-shadow: 
         0 15px 50px rgba(0, 0, 0, 0.2),
-        0 8px 25px rgba(22, 121, 29, 0.1);
+        0 8px 25px rgba(220, 38, 38, 0.1);
     transition: all 0.4s ease;
-    border: 2px solid rgba(22, 121, 29, 0.2);
+    border: none !important;
 }
 
 .tour-video:hover {
     transform: scale(1.02) translateY(-5px);
     box-shadow: 
         0 20px 60px rgba(0, 0, 0, 0.25),
-        0 10px 30px rgba(22, 121, 29, 0.15);
-    border-color: rgba(22, 121, 29, 0.4);
+        0 10px 30px rgba(220, 38, 38, 0.15);
 }
 
 @media (max-width: 900px) {
@@ -442,16 +455,17 @@ body {
     
     .tour-heading {
         font-size: 32px;
+        padding: 15px 30px;
     }
     
     .tour-description {
         font-size: 16px;
         margin-bottom: 30px;
+        padding: 15px 20px;
     }
     
     .tour-video {
         max-width: 100%;
-        border: 1px solid rgba(0, 255, 255, 0.2);
     }
 }
 
@@ -462,14 +476,16 @@ body {
     
     .tour-heading {
         font-size: 26px;
+        padding: 12px 20px;
     }
     
     .tour-description {
         font-size: 14px;
+        padding: 12px 15px;
     }
     
     .tour-video {
-        border-radius: 15px;
+        border-radius: 0;
     }
 }
 
@@ -594,26 +610,33 @@ body {
 .fifthpart{
     background-image: url("./picture/background-photo.jpg"); 
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 570px;  /* changed from 50vh */
     width: 100%;    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     margin-top: 4%;
-    border-radius: 15px;  
-    
+    border-radius: 15px;
+    padding: 60px 80px;
+    gap: 30px;
 }
 .l2{
     color:#F5F5F5;
     font-weight: 800;
-    font-size: 42px;
+    font-size: 30px;
     font-family: Inter, Arial, sans-serif;
     text-align: center;
     text-shadow: 2px 2px 12px rgba(0,0,0,0.6);
-    transition: color 0.3s;
-    margin: auto 0;
-    padding: 0 75px;
-    padding-top: 100px;
+    transition: all 0.3s ease;
+    margin: 0;
+    padding: 40px 20px;
     line-height: 1.2;
-    max-width: 90%;
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    flex: 1;
 }

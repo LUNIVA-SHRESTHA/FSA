@@ -2,7 +2,7 @@
     text-align: center;
     margin-top: 4%;
     font-size: 36px;
-    color: #16791D;
+    background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 
 }
 .staff-image{
@@ -30,7 +30,7 @@
 .PrimaryStaff{
     text-align: center;
     margin-top: 50px;
-    color: #16791D;
+    background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 
 
 }

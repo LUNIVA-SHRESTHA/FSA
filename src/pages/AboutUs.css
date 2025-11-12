@@ -68,7 +68,7 @@ body {
 
 .about-flip-card-front h3,
 .about-flip-card-back h3 {
-    color: #16791D;
+    background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     font-size: 24px;
     margin-bottom: 15px;
 }
@@ -95,7 +95,7 @@ body {
 }
 .about-flip-card-front li:before {
     content: "★";
-    color: #16791D;
+    background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     font-weight: bold;
     position: absolute;
     left: 0;
@@ -155,7 +155,7 @@ body {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 22px;
-    background: #16791D;
+    background: #dc2626;
     color: #fff;
     border-radius: 8px;
     text-decoration: none;
@@ -167,7 +167,7 @@ body {
 }
 
 .about-card h3 {
-    color: #16791D;
+    background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     font-size: 24px;
     margin-bottom: 15px;
 }
@@ -193,7 +193,7 @@ body {
 
 .about-card li:before {
     content: "★";
-    color: #16791D;
+    background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     font-weight: bold;
     position: absolute;
     left: 0;
@@ -204,7 +204,7 @@ body {
 }
 
 .about-card strong {
-    color: #16791D;
+    background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
 
 @media (max-width: 768px) {

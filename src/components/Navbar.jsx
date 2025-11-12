@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/' || location.pathname === '/home';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,11 +44,11 @@ const Navbar = () => {
   }, [isMobileMenuOpen]);
 
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`} id="navbar">
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''} ${isHomePage ? 'animate-in' : ''}`} id="navbar">
       <div className="nav-container">
         <Link to="/" className="nav-logo">
           <img src="./picture/logo.png" alt="Future Stars Academy Logo" className="logo-image" />
-          Future Stars Academy
+          <span>Future Stars Academy</span>
         </Link>
         
         <div className="nav-spacer-logo"></div>
@@ -54,11 +56,11 @@ const Navbar = () => {
         <ul className="nav-menu">
           <li><Link to="/" className="nav-link">Home</Link></li>
           <li><Link to="/academics" className="nav-link">Academics</Link></li>
-          <li><Link to="/Introduction" className="nav-link">Introduction</Link></li>
-          <li><Link to="/download" className="nav-link">Download</Link></li>
+          <li><Link to="/introduction" className="nav-link">Introduction</Link></li>
+          {/* <li><Link to="/download" className="nav-link">Download</Link></li> */}
           <li><Link to="/gallery" className="nav-link">Gallery</Link></li>
           <li><Link to="/about-us" className="nav-link">About</Link></li>
-          <li><Link to="/message" className="nav-link">Message</Link></li>
+          <li><Link to="/contact" className="nav-link">Contact</Link></li>
         </ul>
         
         <div className="nav-spacer"></div>
