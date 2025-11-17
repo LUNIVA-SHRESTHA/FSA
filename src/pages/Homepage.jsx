@@ -102,7 +102,14 @@ const Homepage = () => {
           </div>
         </div>
 
+ 
+
+
         <div className="thirdpart">
+          <div>
+          <h1>Yellow day</h1>
+          </div>
+          <div>
           <p style={{fontSize:'17px'}}>
             At Future Stars, we believe that festivals are a reflection of our rich cultural
             heritage and an opportunity to instill values of unity, respect, and joy among students. 
@@ -118,6 +125,7 @@ const Homepage = () => {
             width="650" 
             alt="Festival celebration"
           />
+          </div>
         </div>
         
         <div className="fourthpart">
