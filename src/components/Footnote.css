@@ -1,13 +1,14 @@
-/* Premium Footer - Dark Red + Blue Theme */
+/* Premium Footer - Red + Blue + White Theme */
 .footnote {
     width: 100%;
-    background: linear-gradient(135deg, #1D3557 0%, #2A2A3A 50%, #3C3452 100%);
+    background: linear-gradient(135deg, #1D3557 0%, #7A6A9A 50%, #1D3557 100%);
     color: #FFFFFF;
-    margin-top: 0;
+    margin-top: 80px;
     position: relative;
     overflow: hidden;
     border-top: 3px solid transparent;
-    border-image: linear-gradient(90deg, #E63946, #7A6A9A, #1D3557) 1;
+    border-image: linear-gradient(90deg, #E63946, #B16A76, #7A6A9A, #C6C4D6, #1D3557) 1;
+    box-shadow: 0 -4px 24px rgba(122, 106, 154, 0.15);
 }
 
 .footnote::before {
@@ -18,8 +19,9 @@
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 20% 30%, rgba(230, 57, 70, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(122, 106, 154, 0.08) 0%, transparent 50%);
+        radial-gradient(circle at 20% 30%, rgba(230, 57, 70, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(198, 196, 214, 0.08) 0%, transparent 60%),
+        radial-gradient(circle at 80% 70%, rgba(177, 106, 118, 0.1) 0%, transparent 50%);
     pointer-events: none;
     opacity: 1;
 }
@@ -46,27 +48,40 @@
     height: 70px;
     width: 70px;
     margin-bottom: 16px;
-    border-radius: 12px;
+    border-radius: 14px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 
-                0 2px 8px rgba(230, 57, 70, 0.15);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 2px solid rgba(255, 255, 255, 0.1);
+                0 2px 8px rgba(230, 57, 70, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+    background: linear-gradient(#1D3557, #1D3557) padding-box,
+                linear-gradient(135deg, #E63946, #B16A76, #C6C4D6) border-box;
 }
 
 .footer-logo:hover {
-    transform: translateY(-4px);
+    transform: translateY(-4px) rotate(5deg);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 
-                0 4px 12px rgba(230, 57, 70, 0.25);
-    border-color: rgba(230, 57, 70, 0.3);
+                0 4px 12px rgba(230, 57, 70, 0.3),
+                0 0 20px rgba(122, 106, 154, 0.4);
+    border-width: 3px;
 }
 
 .footer-brand {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 8px;
-    color: #FFFFFF;
+    background: linear-gradient(135deg, #FFFFFF, #C6C4D6, #FFFFFF);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: -0.3px;
+    animation: footerBrandShimmer 3s ease-in-out infinite;
+}
+
+@keyframes footerBrandShimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
 }
 
 .footer-tagline {
@@ -101,10 +116,11 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 40px;
-    height: 2px;
-    background: linear-gradient(90deg, #E63946, #7A6A9A);
+    width: 45px;
+    height: 3px;
+    background: linear-gradient(90deg, #E63946, #B16A76, #7A6A9A);
     border-radius: 2px;
+    box-shadow: 0 0 8px rgba(230, 57, 70, 0.4);
 }
 
 .footer-links {
@@ -142,8 +158,10 @@
 }
 
 .footer-link:hover {
-    color: #FFFFFF;
-    padding-left: 8px;
+    background: linear-gradient(90deg, transparent, rgba(198, 196, 214, 0.1));
+    color: #C6C4D6;
+    padding-left: 10px;
+    border-radius: 4px;
 }
 
 .social-link {
@@ -155,12 +173,11 @@
 }
 
 .social-link:hover {
-    background: rgba(230, 57, 70, 0.15);
-    border-color: rgba(230, 57, 70, 0.3);
-    transform: translateY(-2px);
-}
-    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.3), 
-                0 4px 12px rgba(230, 57, 70, 0.2);
+    background: linear-gradient(135deg, rgba(230, 57, 70, 0.15), rgba(122, 106, 154, 0.15));
+    border-color: rgba(198, 196, 214, 0.4);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(122, 106, 154, 0.3), 
+                0 3px 10px rgba(230, 57, 70, 0.2);
 }
 
 .social-link:hover .footer-icon {
@@ -169,13 +186,14 @@
 
 /* Premium Footer Bottom */
 .footer-bottom {
-    background: rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(8px);
+    background: linear-gradient(135deg, rgba(29, 53, 87, 0.4), rgba(122, 106, 154, 0.3));
+    backdrop-filter: blur(12px);
     padding: 24px 5%;
     text-align: center;
     position: relative;
     z-index: 1;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 2px solid transparent;
+    border-image: linear-gradient(90deg, transparent, #C6C4D6, transparent) 1;
 }
 
 .footer-bottom p {
