@@ -109,37 +109,36 @@ const Navbar = () => {
           <li className="nav-item">
             <Link to="/" className="nav-link" data-text="Home">
               <span className="nav-link-text">Home</span>
-              <span className="nav-link-icon">🏠</span>
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/academics" className="nav-link" data-text="Academics">
               <span className="nav-link-text">Academics</span>
-              <span className="nav-link-icon">📚</span>
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/introduction" className="nav-link" data-text="Introduction">
               <span className="nav-link-text">Introduction</span>
-              <span className="nav-link-icon">👋</span>
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/gallery" className="nav-link" data-text="Gallery">
               <span className="nav-link-text">Gallery</span>
-              <span className="nav-link-icon">🖼️</span>
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/about-us" className="nav-link" data-text="About">
               <span className="nav-link-text">About</span>
-              <span className="nav-link-icon">ℹ️</span>
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/contact" className="nav-link nav-link-cta" data-text="Contact">
+            <Link to="/contact" className="nav-link" data-text="Contact">
               <span className="nav-link-text">Contact</span>
-              <span className="nav-link-icon">✉️</span>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/admissions" className="nav-link nav-link-cta" data-text="Enroll Now">
+              <span className="nav-link-text">Enroll Now</span>
               <span className="nav-link-shine"></span>
             </Link>
           </li>
@@ -155,22 +154,28 @@ const Navbar = () => {
       <div className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}>
         <ul className="mobile-nav-menu">
           <li><Link to="/" className="mobile-nav-link" onClick={closeMobileMenu}>
-            <span>🏠</span> Home
+            Home
           </Link></li>
           <li><Link to="/about-us" className="mobile-nav-link" onClick={closeMobileMenu}>
-            <span>ℹ️</span> About
+            About
           </Link></li>
           <li><Link to="/academics" className="mobile-nav-link" onClick={closeMobileMenu}>
-            <span>📚</span> Programs
+            Programs
           </Link></li>
           <li><Link to="/admissions" className="mobile-nav-link" onClick={closeMobileMenu}>
-            <span>📝</span> Admissions
+            Admissions
           </Link></li>
           <li><Link to="/gallery" className="mobile-nav-link" onClick={closeMobileMenu}>
-            <span>🖼️</span> Gallery
+            Gallery
           </Link></li>
           <li><Link to="/staff" className="mobile-nav-link" onClick={closeMobileMenu}>
-            <span>👥</span> Staff
+            Staff
+          </Link></li>
+          <li><Link to="/contact" className="mobile-nav-link" onClick={closeMobileMenu}>
+            Contact
+          </Link></li>
+          <li><Link to="/admissions" className="mobile-nav-link mobile-nav-cta" onClick={closeMobileMenu}>
+            Enroll Now
           </Link></li>
         </ul>
       </div>

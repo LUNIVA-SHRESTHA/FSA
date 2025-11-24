@@ -6,8 +6,8 @@
 }
 
 body {
-    background: #f8f9fa;
-    color: #2c3e50;
+    background: #FFFFFF;
+    color: #1F2937;
     font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
@@ -18,7 +18,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);
+    background: #FFFFFF;
     position: relative;
 }
 
@@ -47,8 +47,8 @@ body {
     background-repeat: no-repeat;
     border-radius: 0 !important;
     box-shadow: 
-        0 8px 32px rgba(220, 38, 38, 0.15),
-        0 4px 16px rgba(0, 0, 0, 0.1);
+        0 8px 32px rgba(230, 57, 70, 0.15),
+        0 4px 16px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -69,7 +69,7 @@ body {
     right: 0;
     bottom: 0;
     background: 
-        linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(220, 38, 38, 0.2));
+        linear-gradient(135deg, rgba(29, 53, 87, 0.5), rgba(230, 57, 70, 0.3));
     border-radius: 0;
     z-index: 0;
 }
@@ -219,14 +219,11 @@ body {
     padding: 60px 5% 60px 8%;
     line-height: 1.6;
     align-items: center;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.9) 100%);
+    background: #F9FAFB;
     border-radius: 20px;
     margin: 20px 0;
-    border: 1px solid rgba(220, 38, 38, 0.1);
-    box-shadow: 
-        0 8px 32px rgba(0, 0, 0, 0.1),
-        0 4px 16px rgba(220, 38, 38, 0.05);
-    backdrop-filter: blur(10px);
+    border: 2px solid #E5E7EB;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     position: relative;
     z-index: 1;
 }
@@ -238,28 +235,23 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 50% 50%, rgba(220, 38, 38, 0.03) 0%, transparent 70%);
+    background: radial-gradient(circle at 50% 50%, rgba(230, 57, 70, 0.02) 0%, transparent 70%);
     border-radius: 20px;
     z-index: -1;
 }
 
 .secondpart img {
     border-radius: 30px;
-    box-shadow: 
-        0 8px 30px rgba(0, 0, 0, 0.15),
-        0 4px 15px rgba(220, 38, 38, 0.1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
     max-width: 100%;
-    /* height: ; */
-    border: 1px solid rgba(220, 38, 38, 0.1);
+    border: 2px solid #E5E7EB;
 }
 
 .secondpart img:hover {
     transform: scale(1.03) translateY(-5px);
-    box-shadow: 
-        0 15px 40px rgba(0, 0, 0, 0.2),
-        0 8px 20px rgba(220, 38, 38, 0.15);
-    border-color: rgba(220, 38, 38, 0.3);
+    box-shadow: 0 15px 40px rgba(230, 57, 70, 0.2);
+    border-color: #E63946;
 }
 
 @media (max-width: 900px) {
@@ -274,14 +266,11 @@ body {
     padding: 35px;
     font-size: 10px;
     width: 100%;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.9) 100%);
+    background: #FFFFFF;
     border-radius: 20px;
-    box-shadow: 
-        0 8px 32px rgba(0, 0, 0, 0.1),
-        0 4px 16px rgba(220, 38, 38, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     transition: all 0.4s ease;
-    border: 1px solid rgba(220, 38, 38, 0.1);
-    backdrop-filter: blur(10px);
+    border: 2px solid #E5E7EB;
     position: relative;
     overflow: hidden;
 }
@@ -293,7 +282,7 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(220, 38, 38, 0.05), transparent);
+    background: linear-gradient(90deg, transparent, rgba(230, 57, 70, 0.03), transparent);
     transition: left 0.6s ease;
 }
 
@@ -429,18 +418,14 @@ body {
     max-width: 800px;
     height: auto;
     border-radius: 0 !important;
-    box-shadow: 
-        0 15px 50px rgba(0, 0, 0, 0.2),
-        0 8px 25px rgba(220, 38, 38, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
     border: none !important;
 }
 
 .tour-video:hover {
     transform: scale(1.02) translateY(-5px);
-    box-shadow: 
-        0 20px 60px rgba(0, 0, 0, 0.25),
-        0 10px 30px rgba(220, 38, 38, 0.15);
+    box-shadow: 0 15px 50px rgba(230, 57, 70, 0.15);
 }
 
 @media (max-width: 900px) {
@@ -490,12 +475,13 @@ body {
     display: flex;
     flex-direction:column;
     padding: 50px 4% 50px 6%;
-    background-color: #F9F9F9;
+    background-color: #F9FAFB;
     margin-top: 4%;
     gap: 40px;
     line-height: 1.6;
     align-items: center;
     border-radius: 15px;
+    border: 2px solid #E5E7EB;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     transition: box-shadow 0.3s;
 }
