@@ -18,38 +18,45 @@ const Homepage = () => {
     const video = videoRef.current;
     if (!video) return;
 
+    let isPlaying = false;
+
     const handleIntersection = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          video.play().catch((error) => {
-            console.log('Video autoplay failed:', error);
-            // Fallback: show controls if autoplay fails
-            video.setAttribute('controls', 'true');
-          });
+          if (!isPlaying) {
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
+              playPromise
+                .then(() => {
+                  isPlaying = true;
+                })
+                .catch((error) => {
+                  console.log('Video autoplay failed:', error);
+                  video.setAttribute('controls', 'true');
+                });
+            }
+          }
         } else {
-          video.pause();
+          if (isPlaying) {
+            video.pause();
+            isPlaying = false;
+          }
         }
       });
     };
 
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.3,
-      rootMargin: '0px 0px -50px 0px'
+      threshold: 0.5,
+      rootMargin: '0px'
     });
 
     observer.observe(video);
 
-    // Also try to play when video is loaded
-    video.addEventListener('loadedmetadata', () => {
-      if (video.offsetParent !== null) { // Check if visible
-        video.play().catch(() => {
-          video.setAttribute('controls', 'true');
-        });
-      }
-    });
-
     return () => {
       observer.unobserve(video);
+      if (isPlaying) {
+        video.pause();
+      }
     };
   }, []);
 
