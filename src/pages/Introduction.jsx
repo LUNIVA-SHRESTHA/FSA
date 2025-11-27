@@ -13,8 +13,8 @@ const Introduction = () => {
         <div className="intro-hero">
           <div className="hero-overlay"></div>
           <div className="hero-content">
-            <h1>Welcome to Future Stars Academy</h1>
-            <p>Nurturing Excellence Since Establishment</p>
+            <h1>Explore FSA</h1>
+            <p><i>"Knowledge Bring Humanity"</i></p>
           </div>
         </div>
 
@@ -40,112 +40,92 @@ const Introduction = () => {
                   </p>
                 </div>
                 <div className="image-container">
-                  <img src="./picture/logo.png" alt="School Logo" className="intro-image" />
+                  <img src="./picture/intro1.jpg" className="intro-image" />
                 </div>
               </div>
             </div>
           </section>
 
           <section className="intro-section highlight-section">
-            <h2 className="section-title">Why Choose Us?</h2>
+            <h2 className="section-title">Who We Are?</h2>
+            <h2> We are an educational institution focused on </h2>
             <div className="features-grid">
               <div className="feature-card">
                 <div className="feature-icon">🎓</div>
-                <h3>Academic Excellence</h3>
-                <p>Comprehensive curriculum designed to meet international standards while maintaining local relevance.</p>
+                <h3>Academic Growth</h3>
+                <p>We provide a strong learning foundation that helps students excel academically.</p>
               </div>
               <div className="feature-card">
                 <div className="feature-icon">👨‍🏫</div>
-                <h3>Expert Faculty</h3>
-                <p>Highly qualified and passionate teachers dedicated to student success and holistic development.</p>
+                <h3>Character Building</h3>
+                <p>We instill values and discipline to shape responsible and confident individuals.</p>
               </div>
               <div className="feature-card">
                 <div className="feature-icon">🏢</div>
-                <h3>Modern Facilities</h3>
-                <p>State-of-the-art infrastructure including well-equipped classrooms, labs, and sports facilities.</p>
-              </div>
-              <div className="feature-card">
-                <div className="feature-icon">🌱</div>
-                <h3>Holistic Development</h3>
-                <p>Focus on overall growth through academics, sports, arts, and character-building activities.</p>
-              </div>
-              <div className="feature-card">
-                <div className="feature-icon">🤝</div>
-                <h3>Community Focus</h3>
-                <p>Strong emphasis on values, ethics, and social responsibility to create responsible citizens.</p>
-              </div>
-              <div className="feature-card">
-                <div className="feature-icon">🌟</div>
-                <h3>Individual Attention</h3>
-                <p>Small class sizes ensuring personalized attention and support for every student.</p>
+                <h3>Real-World Skills</h3>
+                <p>We equip students with practical skills that prepare them for future challenges.</p>
               </div>
             </div>
           </section>
 
-          <section className="intro-section stats-section">
-            <h2 className="section-title">Our Impact in Numbers</h2>
-            <div className="stats-container">
-              <div className="stat-box">
-                <div className="stat-number">500+</div>
-                <div className="stat-label">Students</div>
+          <section className="intro-section whatweoffer-section">
+            <h2 className="section-title">What We Offer</h2>
+            <div className='whatweofferimage'>
+            <img src='./picture/offer1.jpg' height="220px" width="330px"></img>
+            <img src='./picture/offer2.jpg'height="220px" width="350px"></img>
+            <img src='./picture/offer3.jpg' height="220x" width="400px"></img>
+            </div>
+            <div className="whatweoffercontent">
+              <div className="offer-item">
+                <h3 className="offer-title">Academic Excellence</h3>
+                <p>A strong curriculum designed to build problem-solving, critical thinking and communication skills.</p>
               </div>
-              <div className="stat-box">
-                <div className="stat-number">50+</div>
-                <div className="stat-label">Qualified Teachers</div>
+
+              <div className="offer-item">
+                <h3 className="offer-title">Modern Classrooms & Facilities</h3>
+                <p>Digital classrooms, science & computer labs, a well-stocked library and safe sports facilities for hands-on learning.</p>
               </div>
-              <div className="stat-box">
-                <div className="stat-number">95%</div>
-                <div className="stat-label">Success Rate</div>
+
+              <div className="offer-item">
+                <h3 className="offer-title">Extracurricular Activities</h3>
+                <p>Sports, arts, music, clubs and leadership programs that strengthen character and real-world skills.</p>
               </div>
-              <div className="stat-box">
-                <div className="stat-number">20+</div>
-                <div className="stat-label">Years of Excellence</div>
+
+              <div className="offer-item">
+                <h3 className="offer-title">Student-Centered Environment</h3>
+                <p>Small classes, mentoring and well‑being support focused on each student’s development.</p>
               </div>
             </div>
-          </section>
+            </section>
 
-          <section className="intro-section approach-section">
-            <h2 className="section-title">Our Educational Approach</h2>
-            <div className="approach-content">
-              <div className="approach-item">
-                <div className="approach-number">01</div>
-                <div className="approach-details">
-                  <h3>Student-Centered Learning</h3>
-                  <p>We believe in placing students at the heart of the learning process, 
-                     encouraging active participation, critical thinking, and creativity in 
-                     every lesson.</p>
-                </div>
-              </div>
-              <div className="approach-item">
-                <div className="approach-number">02</div>
-                <div className="approach-details">
-                  <h3>Innovative Teaching Methods</h3>
-                  <p>Our teachers employ modern pedagogical techniques, integrating technology 
-                     and hands-on activities to make learning engaging and effective.</p>
-                </div>
-              </div>
-              <div className="approach-item">
-                <div className="approach-number">03</div>
-                <div className="approach-details">
-                  <h3>Character Development</h3>
-                  <p>Beyond academics, we focus on building strong moral values, leadership 
-                     qualities, and social skills essential for success in life.</p>
-                </div>
-              </div>
-              <div className="approach-item">
-                <div className="approach-number">04</div>
-                <div className="approach-details">
-                  <h3>Continuous Assessment</h3>
-                  <p>Regular evaluations and feedback help us track progress and provide 
-                     targeted support to ensure every student reaches their full potential.</p>
-                </div>
-              </div>
+          <section className="intro-section value-section">
+            <h2 className="section-title">FSA Values</h2>
+            <div className='Valuess-section'>
+            <img src="./picture/ourvalue.jpg" height="450px" width="840px"   />
+            <div>
+                  <h3 className='valuess-text'>Respect</h3>
+                  <h3 className='valuess-text'>Disclipline</h3>
+                  <h3 className='valuess-text'>Integrity</h3>
+                  <h3 className='valuess-text'>Teamwork</h3>
+                  <h3 className='valuess-text'>Excellence</h3>
+                  </div>
+                  </div>
+                  </section>
+                  
+          <section className="intro-section principal-section">
+            <div className='principal-section'>
+            <h2 className="section-title">Message from the Principal</h2>
+            <div className='principalmessage'>
+            <img src='./picture/principal.jpg'height="350px" ></img>
+            <p>“Our goal is to inspire students to dream big, think critically, and act with kindness.
+            At FSA, every child is valued, supported, and encouraged to succeed.”</p>
+            </div>
             </div>
           </section>
 
           <section className="intro-section cta-section">
             <div className="cta-content">
-              <h2>Join Our Community</h2>
+              <h2>Get in Touch</h2>
               <p>Be part of an institution that values excellence, integrity, and innovation. 
                  Together, we can build a brighter future for your child.</p>
               <div className="cta-buttons">

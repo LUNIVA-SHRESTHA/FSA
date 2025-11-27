@@ -5,7 +5,6 @@ import './Work.css';
 import useScrollToTop from '../hooks/useScrollToTop';
 
 const Work = () => {
-  // Use the custom hook to scroll to top
   useScrollToTop();
   
   return (
@@ -22,8 +21,19 @@ const Work = () => {
           <img src='./picture/vacancy1.jpg' alt=''/>
           <img src='./picture/vacancy2.jpg' alt=''/>
           <img src='./picture/vacancy3.jpg' alt=''/>
-
-
+        </div>
+        <h3 className='work-heading'>Why Work with Us?</h3>
+        <div className='workone'>
+        <p className='feature-item'>Supportive and friendly work environment</p>
+        <p className='feature-item'>Job Security</p>
+        <p className='feature-item'>Competitive salary</p>
+        </div>
+        <div className='worktwo'>
+        <p className='feature-item'>Professional growth and training opportunities</p>
+        <p className='feature-item'>  Modern teaching tools</p>
+        </div>
+        <div className='workthree'>
+        <p className='feature-item'>  Recognition and reward system</p>
         </div>
         </div>
         
