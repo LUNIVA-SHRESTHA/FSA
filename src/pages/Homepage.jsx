@@ -7,9 +7,6 @@ import useScrollToTop from '../hooks/useScrollToTop'; // Import the custom hook
 const Homepage = () => {
   const videoRef = useRef(null);
   const fourthPartRef = useRef(null);
-  const fifthPartRef = useRef(null);
-  const [fifthPartVisible, setFifthPartVisible] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
 
   // Use the custom hook to scroll to top
   useScrollToTop();
@@ -93,37 +90,6 @@ const Homepage = () => {
     };
   }, []);
 
-  // Add overlay scroll effect for fifth part
-  useEffect(() => {
-    const handleScroll = () => {
-      const fifthPart = fifthPartRef.current;
-      if (!fifthPart) return;
-
-      const rect = fifthPart.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      
-      // Calculate when fifth part starts entering viewport
-      if (rect.top <= windowHeight && rect.bottom >= 0) {
-        // Calculate progress (0 to 1)
-        const progress = Math.max(0, Math.min(1, (windowHeight - rect.top) / windowHeight));
-        setScrollProgress(progress);
-        
-        if (progress > 0.1) {
-          setFifthPartVisible(true);
-        } else {
-          setFifthPartVisible(false);
-        }
-      } else {
-        setScrollProgress(0);
-        setFifthPartVisible(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
   return (
     <>
       <Navbar />
@@ -240,34 +206,8 @@ const Homepage = () => {
           </div>
         </div>
         
-        {/* Fifth part overlay trigger */}
-        <div className="fifth-part-trigger" ref={fifthPartRef}></div>
-      </div>
-
-      {/* Fifth part as overlay */}
-      <div 
-        className={`fifthpart-overlay ${fifthPartVisible ? 'active' : ''}`}
-        style={{
-          transform: `translateY(${(1 - scrollProgress) * 100}%)`,
-          opacity: scrollProgress
-        }}
-      >
-        <div className="fifthpart-content">
-          {/* Animated background elements */}
-          <div className="stats-bg-animation">
-            <div className="stats-circle stats-circle-1"></div>
-            <div className="stats-circle stats-circle-2"></div>
-            <div className="stats-circle stats-circle-3"></div>
-          </div>
-
-          {/* Floating particles */}
-          <div className="stats-particle"></div>
-          <div className="stats-particle"></div>
-          <div className="stats-particle"></div>
-          <div className="stats-particle"></div>
-          <div className="stats-particle"></div>
-          
-          {/* Stats cards with icons */}
+        {/* Stats Section */}
+        <div className="fifthpart">
           <div className="stats-container">
             <div className="stat-card">
               <h2 className='stat-number'>40+</h2>

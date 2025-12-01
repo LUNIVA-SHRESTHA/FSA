@@ -73,76 +73,40 @@ const Navbar = () => {
   return (
     <nav 
       ref={navbarRef}
-      className={`navbar ${isScrolled ? 'scrolled' : ''} ${isHomePage ? 'animate-in' : ''}`} 
+      className={`navbar ${isScrolled ? 'scrolled' : ''}`} 
       id="navbar"
-      style={{
-        '--mouse-x': `${mousePosition.x}px`,
-        '--mouse-y': `${mousePosition.y}px`
-      }}
     >
       {/* Scroll Progress Bar */}
       <div className="scroll-progress-bar" style={{ width: `${scrollProgress}%` }}></div>
-      
-      {/* Animated Background Gradient */}
-      <div className="navbar-bg-gradient"></div>
-      
-      {/* Floating Particles */}
-      <div className="navbar-particles">
-        {[...Array(12)].map((_, i) => (
-          <div key={i} className="particle" style={{ '--particle-delay': `${i * 0.5}s` }}></div>
-        ))}
-      </div>
 
       <div className="nav-container">
-        <Link to="/" className="nav-logo" data-text="Future Stars Academy">
-          <div className="logo-wrapper">
-            <img src="./picture/logo.png" alt="Future Stars Academy Logo" className="logo-image" />
-            <div className="logo-glow"></div>
-          </div>
-          <span className="logo-text">
-            <span className="logo-text-main">Future Stars Academy</span>
-            <span className="logo-text-shadow">Future Stars Academy</span>
-          </span>
+        <Link to="/" className="nav-logo">
+          <img src="./picture/logo.png" alt="Future Stars Academy Logo" className="logo-image" />
+          <span className="logo-text">Future Stars Academy</span>
         </Link>
         
         <ul className="nav-menu">
           <li className="nav-item">
-            <Link to="/" className="nav-link" data-text="Home">
-              <span className="nav-link-text">Home</span>
-            </Link>
+            <Link to="/" className="nav-link">Home</Link>
           </li>
           <li className="nav-item">
-            <Link to="/academics" className="nav-link" data-text="Academics">
-              <span className="nav-link-text">Academics</span>
-            </Link>
+            <Link to="/academics" className="nav-link">Academics</Link>
           </li>
           <li className="nav-item">
-            <Link to="/introduction" className="nav-link" data-text="Introduction">
-              <span className="nav-link-text">Introduction</span>
-            </Link>
+            <Link to="/introduction" className="nav-link">Introduction</Link>
           </li>
           <li className="nav-item">
-            <Link to="/gallery" className="nav-link" data-text="Gallery">
-              <span className="nav-link-text">Gallery</span>
-            </Link>
+            <Link to="/gallery" className="nav-link">Gallery</Link>
           </li>
           <li className="nav-item">
-            <Link to="/about-us" className="nav-link" data-text="About">
-              <span className="nav-link-text">About</span>
-            </Link>
+            <Link to="/about-us" className="nav-link">About</Link>
           </li>
           <li className="nav-item">
-            <Link to="/contact" className="nav-link" data-text="Contact">
-              <span className="nav-link-text">Contact</span>
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/admissions" className="nav-link nav-link-cta" data-text="Enroll Now">
-              <span className="nav-link-text">Enroll Now</span>
-              <span className="nav-link-shine"></span>
-            </Link>
+            <Link to="/contact" className="nav-link">Contact</Link>
           </li>
         </ul>
+        
+        <Link to="/admissions" className="nav-cta">Enroll Now</Link>
         
         <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
           <span className="hamburger-line"></span>
@@ -153,30 +117,12 @@ const Navbar = () => {
       
       <div className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}>
         <ul className="mobile-nav-menu">
-          <li><Link to="/" className="mobile-nav-link" onClick={closeMobileMenu}>
-            Home
-          </Link></li>
-          <li><Link to="/about-us" className="mobile-nav-link" onClick={closeMobileMenu}>
-            About
-          </Link></li>
-          <li><Link to="/academics" className="mobile-nav-link" onClick={closeMobileMenu}>
-            Programs
-          </Link></li>
-          <li><Link to="/admissions" className="mobile-nav-link" onClick={closeMobileMenu}>
-            Admissions
-          </Link></li>
-          <li><Link to="/gallery" className="mobile-nav-link" onClick={closeMobileMenu}>
-            Gallery
-          </Link></li>
-          <li><Link to="/staff" className="mobile-nav-link" onClick={closeMobileMenu}>
-            Staff
-          </Link></li>
-          <li><Link to="/contact" className="mobile-nav-link" onClick={closeMobileMenu}>
-            Contact
-          </Link></li>
-          <li><Link to="/admissions" className="mobile-nav-link mobile-nav-cta" onClick={closeMobileMenu}>
-            Enroll Now
-          </Link></li>
+          <li><Link to="/" className="mobile-nav-link" onClick={closeMobileMenu}>Home</Link></li>
+          <li><Link to="/about-us" className="mobile-nav-link" onClick={closeMobileMenu}>About</Link></li>
+          <li><Link to="/academics" className="mobile-nav-link" onClick={closeMobileMenu}>Programs</Link></li>
+          <li><Link to="/admissions" className="mobile-nav-link" onClick={closeMobileMenu}>Admissions</Link></li>
+          <li><Link to="/gallery" className="mobile-nav-link" onClick={closeMobileMenu}>Gallery</Link></li>
+          <li><Link to="/staff" className="mobile-nav-link" onClick={closeMobileMenu}>Staff</Link></li>
         </ul>
       </div>
     </nav>

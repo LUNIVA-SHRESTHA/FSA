@@ -41,82 +41,52 @@ const AboutUs = () => {
             every child can discover their potential and shine like a star.
           </p>
           <div className="about-sections">
-            <div className="about-row">
-              { [
-                {
-                  title: 'Our Mission',
-                  front: 'Empowering students to become lifelong learners and responsible citizens.',
-                  back: 'We nurture curiosity, build character, and inspire every student to reach their full potential in a safe, inclusive, and supportive environment.',
-                  link: '/about-us/mission'
-                },
-                {
-                  title: 'Our Vision',
-                  front: 'Preparing future leaders for a rapidly changing world.',
-                  back: 'We aim to be a leading institution recognized for developing compassionate, innovative, and globally-minded individuals who make a positive impact.',
-                  link: '/about-us/vision'
-                },
-                {
-                  title: 'Our Values',
-                  front: (
-                    <>
-                      <ul>
-                        <li>Excellence</li>
-                        <li>Integrity</li>
-                        <li>Respect</li>
-                        <li>Innovation</li>
-                        <li>Collaboration</li>
-                      </ul>
-                    </>
-                  ),
-                  back: 'We uphold excellence, integrity, respect, innovation, and collaboration in every aspect of our school community.',
-                  link: '/about-us/values'
-                }
-              ].map((card, idx) => (
-                <div className="about-flip-card" key={idx}>
-                  <div className="about-flip-card-inner">
-                    <div className="about-flip-card-front">
-                      <h3>{card.title}</h3>
-                      {typeof card.front === 'string' ? <p>{card.front}</p> : card.front}
-                    </div>
-                    <div className="about-flip-card-back">
-                      <h3>{card.title}</h3>
-                      <p>{card.back}</p>
-                      <a className="view-more-btn" href={card.link}>View More</a>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="about-row">
-              { [
-                {
-                  title: 'Our Faculty',
-                  front: 'Meet our passionate and experienced educators.',
-                  back: 'Our faculty is dedicated to guiding, mentoring, and inspiring students to achieve academic and personal success.',
-                  link: '/about-us/faculty'
-                },
-                {
-                  title: 'Our Facilities',
-                  front: 'Modern spaces for learning, creativity, and growth.',
-                  back: 'Our campus features state-of-the-art classrooms, labs, library, sports facilities, and technology resources for a comprehensive learning experience.',
-                  link: '/about-us/facilities'
-                }
-              ].map((card, idx) => (
-                <div className="about-flip-card" key={idx}>
-                  <div className="about-flip-card-inner">
-                    <div className="about-flip-card-front">
-                      <h3>{card.title}</h3>
-                      <p>{card.front}</p>
-                    </div>
-                    <div className="about-flip-card-back">
-                      <h3>{card.title}</h3>
-                      <p>{card.back}</p>
-                      <a className="view-more-btn" href={card.link}>View More</a>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+            { [
+              {
+                title: 'Our Mission',
+                description: 'We nurture curiosity, build character, and inspire every student to reach their full potential in a safe, inclusive, and supportive environment.',
+                icon: '🎯'
+              },
+              {
+                title: 'Our Vision',
+                description: 'We aim to be a leading institution recognized for developing compassionate, innovative, and globally-minded individuals who make a positive impact.',
+                icon: '🌟'
+              },
+              {
+                title: 'Our Values',
+                description: 'We uphold excellence, integrity, respect, innovation, and collaboration in every aspect of our school community.',
+                
+                icon: '💎'
+              },
+              {
+                title: 'Our Faculty',
+                description: 'Our faculty is dedicated to guiding, mentoring, and inspiring students to achieve academic and personal success through passionate teaching.',
+                icon: '👨‍🏫'
+              },
+              {
+                title: 'Our Facilities',
+                description: 'Our campus features state-of-the-art classrooms, labs, library, sports facilities, and technology resources for a comprehensive learning experience.',
+                icon: '🏫'
+              },
+              {
+                title: 'Our Achievements',
+                description: 'We celebrate excellence in academics, sports, arts, and community service. Our students consistently achieve remarkable results and make us proud.',
+                icon: '🏆'
+              }
+            ].map((card, idx) => (
+              <div className="about-card" key={idx}>
+                <div className="about-card-icon">{card.icon}</div>
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+                {card.values && (
+                  <ul className="about-values-list">
+                    {card.values.map((value, i) => (
+                      <li key={i}>{value}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
           </div>
         </div>
         {selectedCard && extraContents[selectedCard] && (

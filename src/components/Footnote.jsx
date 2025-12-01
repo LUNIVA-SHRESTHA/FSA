@@ -15,9 +15,9 @@ const Footnote = () => {
         <div className='footer-section'>
           <h2 className='footer-heading'>Contact Information</h2>
           <div className='footer-links'>
-            <p className='footer-item'>Lubhoo, Lalitpur</p>
-            <p className='footer-item'>9841529303</p>
-            <p className='footer-item'>info@futurestars.edu.np</p>
+            <p className='footer-item'><span className='footer-icon'>📍</span> Lubhoo, Lalitpur</p>
+            <p className='footer-item'><span className='footer-icon'>📞</span> 9841529303</p>
+            <p className='footer-item'><span className='footer-icon'>✉️</span> info@futurestars.edu.np</p>
           </div>
         </div>
 
@@ -36,13 +36,13 @@ const Footnote = () => {
           <h2 className='footer-heading'>Follow Us</h2>
           <div className='footer-links'>
             <a href='https://www.facebook.com/futurestars.acdmy' target='_blank' rel='noopener noreferrer' className="footer-link social-link">
-              Facebook
+              <span className='footer-icon'>📘</span> Facebook
             </a>
             <a href='#' className="footer-link social-link">
-              Instagram
+              <span className='footer-icon'>📸</span> Instagram
             </a>
             <a href='#' className="footer-link social-link">
-              Twitter
+              <span className='footer-icon'>🐦</span> Twitter
             </a>
           </div>
         </div>
@@ -50,7 +50,7 @@ const Footnote = () => {
 
       <div className='footer-bottom'>
         <p>&copy; 2025 Future Stars Academy. All Rights Reserved.</p>
-        <p className='footer-credits'>Designed for Education Excellence</p>
+        <p className='footer-credits'>Designed with ❤️ for Education</p>
       </div>
     </footer>
   );

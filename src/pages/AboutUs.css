@@ -1,217 +1,96 @@
-.about-row {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 32px;
-}
-
-@media (max-width: 900px) {
-    .about-row {
-        flex-direction: column;
-        gap: 24px;
-        align-items: center;
-    }
-}
 /* About Us Page Styles */
 body {
     background-color: #ffffff;
 }
 
 .about-sections {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
     margin-top: 40px;
 }
 
-
-/* Flip card styles */
-.about-flip-card {
-    background: transparent;
-    perspective: 1000px;
-    height: 340px;
-    width: 320px;
-    min-width: 320px;
-    max-width: 320px;
-    flex: 0 0 320px;
-    display: flex;
-    align-items: stretch;
-}
-
-.about-flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 2s cubic-bezier(.4,2,.3,1);
-    transform-style: preserve-3d;
-}
-
-.about-flip-card:hover .about-flip-card-inner {
-    transform: rotateY(180deg);
-    transform: rotateY(180deg);
-}
-
-.about-flip-card-front, .about-flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+/* Clean card styles matching site aesthetic */
+.about-card {
     background: #FFFFFF;
     border: 2px solid #E5E7EB;
-    padding: 30px;
+    border-radius: 15px;
+    padding: 35px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-}
-
-.about-flip-card-front h3,
-.about-flip-card-back h3 {
-    background: linear-gradient(135deg, #E63946 0%, #1D3557 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.about-flip-card-front p,
-.about-flip-card-back p {
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 15px;
     text-align: center;
 }
 
-.about-flip-card-front ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 15px;
-}
-.about-flip-card-front li {
-    color: #555;
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
-    position: relative;
-    padding-left: 20px;
-}
-.about-flip-card-front li:before {
-    content: "★";
-    background: linear-gradient(135deg, #E63946 0%, #1D3557 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-}
-.about-flip-card-front li:last-child {
-    border-bottom: none;
+.about-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+    border-color: #E63946;
 }
 
-.about-flip-card-back {
-    transform: rotateY(180deg);
-    background: linear-gradient(120deg, #5bc16a 0%, #4a9de2 60%, #fff44f 100%);
-    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
-    backdrop-filter: blur(8px);
-    border: 1.5px solid rgba(255,255,255,0.18);
-    position: relative;
-    overflow: hidden;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-}
-.about-flip-card-back h3 {
-    color: #fff;
-    font-size: 24px;
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
-    font-weight: 700;
-}
-.about-flip-card-back p {
-    color: #fff;
-    line-height: 1.8;
-    margin-bottom: 15px;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-    font-weight: 500;
+.about-card-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
 }
 
-/* Add a subtle animated shine */
-.about-flip-card-back::before {
-        content: "";
-        position: absolute;
-        top: -60%;
-        left: -60%;
-        width: 220%;
-        height: 220%;
-        background: linear-gradient(120deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.08) 100%);
-        transform: rotate(25deg);
-        pointer-events: none;
-        animation: shine 2.5s linear infinite;
-}
-
-@keyframes shine {
-    0% { opacity: 0.7; }
-    50% { opacity: 1; }
-    100% { opacity: 0.7; }
-}
-
-.view-more-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 22px;
-    background: #dc2626;
-    color: #fff;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background 0.2s;
-}
-.view-more-btn:hover {
-    background: #145c16;
+.about-card:hover .about-card-icon {
+    transform: scale(1.15);
 }
 
 .about-card h3 {
-    background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    background: linear-gradient(135deg, #E63946 0%, #1D3557 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-size: 24px;
     margin-bottom: 15px;
+    font-weight: 700;
 }
 
 .about-card p {
     color: #555;
     line-height: 1.8;
-    margin-bottom: 15px;
+    margin-bottom: 0;
+    font-size: 16px;
 }
 
-.about-card ul {
+.about-values-list {
     list-style: none;
     padding: 0;
+    margin-top: 20px;
+    width: 100%;
 }
 
-.about-card li {
+.about-values-list li {
     color: #555;
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
+    padding: 10px 15px;
+    margin: 8px 0;
+    background: #F9FAFB;
+    border-left: 3px solid #E63946;
+    border-radius: 5px;
     position: relative;
-    padding-left: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
-.about-card li:before {
-    content: "★";
-    background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
+.about-values-list li:hover {
+    background: #FEF2F2;
+    border-left-color: #1D3557;
+    transform: translateX(5px);
 }
 
-.about-card li:last-child {
-    border-bottom: none;
-}
 
-.about-card strong {
-    background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+
+
+
+@media (max-width: 1200px) {
+    .about-sections {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
 }
 
 @media (max-width: 768px) {

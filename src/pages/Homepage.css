@@ -69,7 +69,7 @@ body {
     right: 0;
     bottom: 0;
     background: 
-        linear-gradient(135deg, rgba(29, 53, 87, 0.5), rgba(230, 57, 70, 0.3));
+        linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2));
     border-radius: 0;
     z-index: 0;
 }
@@ -340,16 +340,14 @@ body {
 
 /* Video Tour Section */
 .video-tour-section {
-    padding: 60px 5% 60px 8%;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.9) 50%, rgba(233, 236, 239, 0.9) 100%);
+    padding: 80px 5%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 249, 250, 0.95) 100%);
     text-align: center;
-    margin: 40px 0;
-    /* border-radius: 25px; */
+    margin: 60px 0;
     border: 1px solid rgba(220, 38, 38, 0.1);
     box-shadow: 
-        0 12px 40px rgba(0, 0, 0, 0.1),
+        0 12px 40px rgba(0, 0, 0, 0.08),
         0 6px 20px rgba(220, 38, 38, 0.05);
-    backdrop-filter: blur(15px);
     position: relative;
     overflow: hidden;
 }
@@ -362,27 +360,28 @@ body {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 30% 70%, rgba(220, 38, 38, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 70% 30%, rgba(52, 152, 219, 0.03) 0%, transparent 50%);
+        radial-gradient(circle at 30% 70%, rgba(220, 38, 38, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 70% 30%, rgba(30, 64, 175, 0.03) 0%, transparent 50%);
     z-index: 0;
 }
 
 .tour-heading {
-    background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    font-size: 42px;
-    font-weight: 800;
-    margin-bottom: 20px;
-    text-shadow: 0 2px 4px rgba(220, 38, 38, 0.2);
-    letter-spacing: 1px;
+    font-size: 52px;
+    font-weight: 900;
+    margin-bottom: 50px;
+    letter-spacing: 0.5px;
     position: relative;
     z-index: 1;
-    background: rgba(255, 255, 255, 0.7) !important;
-    backdrop-filter: blur(15px) !important;
-    -webkit-backdrop-filter: blur(15px) !important;
-    padding: 20px 40px;
-    border-radius: 15px;
-    display: inline-block;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #dc2626 0%, #1e40af 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    filter: contrast(1.1);
+    padding: 0;
+    text-shadow: none;
 }
 
 .tour-description {
@@ -393,12 +392,11 @@ body {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1;
-    background: rgba(255, 255, 255, 0.65) !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     padding: 20px 30px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -411,32 +409,40 @@ body {
     max-width: 100%;
     position: relative;
     z-index: 1;
+    margin-top: 40px;
 }
 
 .tour-video {
     width: 100%;
-    max-width: 800px;
+    max-width: 1200px;
     height: auto;
-    border-radius: 0 !important;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    min-height: 600px;
+    border-radius: 20px;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.15),
+        0 10px 30px rgba(220, 38, 38, 0.1);
     transition: all 0.4s ease;
-    border: none !important;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    object-fit: cover;
 }
 
 .tour-video:hover {
-    transform: scale(1.02) translateY(-5px);
-    box-shadow: 0 15px 50px rgba(230, 57, 70, 0.15);
+    transform: scale(1.02) translateY(-8px);
+    box-shadow: 
+        0 25px 70px rgba(0, 0, 0, 0.2),
+        0 15px 40px rgba(230, 57, 70, 0.15);
+    border-color: rgba(220, 38, 38, 0.3);
 }
 
 @media (max-width: 900px) {
     .video-tour-section {
-        padding: 40px 3%;
-        margin: 20px 0;
+        padding: 50px 3%;
+        margin: 30px 0;
     }
     
     .tour-heading {
-        font-size: 32px;
-        padding: 15px 30px;
+        font-size: 38px;
+        margin-bottom: 35px;
     }
     
     .tour-description {
@@ -447,17 +453,20 @@ body {
     
     .tour-video {
         max-width: 100%;
+        min-height: 400px;
+        border-radius: 15px;
     }
 }
 
 @media (max-width: 600px) {
     .video-tour-section {
-        padding: 30px 2%;
+        padding: 40px 4%;
+        margin: 20px 0;
     }
     
     .tour-heading {
-        font-size: 26px;
-        padding: 12px 20px;
+        font-size: 32px;
+        margin-bottom: 30px;
     }
     
     .tour-description {
@@ -466,7 +475,8 @@ body {
     }
     
     .tour-video {
-        border-radius: 0;
+        min-height: 300px;
+        border-radius: 12px;
     }
 }
 
@@ -664,34 +674,12 @@ body {
     }
 }
 
-/* Fifth part trigger (invisible element to trigger scroll) */
-.fifth-part-trigger {
-  height: 100vh;
-  width: 100%;
-}
-
-/* Fifth part overlay that slides up */
-.fifthpart-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 100;
-  pointer-events: none;
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-  will-change: transform, opacity;
-}
-
-.fifthpart-overlay.active {
-  pointer-events: auto;
-}
-
-/* Fifth part content */
-.fifthpart-content {
+/* Fifth part - Stats Section */
+.fifthpart {
   position: relative;
   width: 100%;
-  height: 100%;
+  padding: 120px 5%;
+  min-height: 700px;
   background-image: url("./picture/background-photo.jpg");
   background-size: cover;
   background-position: center;
@@ -699,138 +687,69 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 80px 20px;
+  margin-top: 60px;
   overflow: hidden;
+}
+
+.fifthpart::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
 /* Stats container */
 .stats-container {
-    display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-    margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Animated background circles */
-.stats-bg-animation {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  opacity: 0.2;
-  z-index: 1;
-}
-
-.stats-circle {
-  position: absolute;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
-  animation: floatCircle 20s ease-in-out infinite;
-}
-
-.stats-circle-1 {
-  width: 300px;
-  height: 300px;
-  top: -50px;
-  left: -50px;
-  animation-delay: 0s;
-}
-
-.stats-circle-2 {
-  width: 400px;
-  height: 400px;
-  bottom: -100px;
-  right: -100px;
-  animation-delay: 5s;
-}
-
-.stats-circle-3 {
-  width: 250px;
-  height: 250px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation-delay: 10s;
-}
-
-@keyframes floatCircle {
-  0%, 100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(30px, -30px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-}
-
-/* Adjust stat cards for overlay */
-.fifthpart-overlay .stat-card {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.fifthpart-overlay.active .stat-card {
-  animation: slideUpCard 0.6s ease-out forwards;
-}
-
-.fifthpart-overlay.active .stat-card:nth-child(1) {
-  animation-delay: 0.2s;
-}
-
-.fifthpart-overlay.active .stat-card:nth-child(2) {
-  animation-delay: 0.35s;
-}
-
-.fifthpart-overlay.active .stat-card:nth-child(3) {
-  animation-delay: 0.5s;
-}
-
-@keyframes slideUpCard {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Stat Cards */
+/* Stat Cards with Glassy Effect */
 .stat-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-radius: 20px;
-  padding: 35px 45px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border-radius: 24px;
+  padding: 50px 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 15px;
-  min-width: 240px;
-  max-width: 280px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15),
-              0 0 0 1px rgba(255, 255, 255, 0.5),
-              inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  transform: translateY(50px);
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  z-index: 2;
-  opacity: 0;
+  min-width: 280px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
 }
 
 .stat-card:hover {
-  transform: translateY(-15px) scale(1.05);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3),
-              0 0 0 1px rgba(255, 255, 255, 0.5);
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.25);
 }
-
-
 
 /* Stat Number */
 .stat-number {
-  font-size: 48px;
+  font-size: 56px;
   font-weight: 800;
   color: #ffffff;
   margin: 0;
@@ -840,87 +759,23 @@ body {
 
 /* Stat Label */
 .stat-label {
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 600;
   color: #ffffff;
   margin: 0;
   text-align: center;
   letter-spacing: 0.5px;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-}
-
-/* Floating particles */
-.stats-particle {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.9), transparent);
-  border-radius: 50%;
-  pointer-events: none;
-  opacity: 0;
-  z-index: 0;
-}
-
-.fifthpart-overlay.active .stats-particle {
-  animation: floatParticle 4s ease-in-out infinite;
-}
-
-.fifthpart-overlay.active .stats-particle:nth-child(2) {
-  left: 10%;
-  animation-delay: 0s;
-  animation-duration: 3s;
-}
-
-.fifthpart-overlay.active .stats-particle:nth-child(3) {
-  left: 30%;
-  animation-delay: 0.5s;
-  animation-duration: 4s;
-}
-
-.fifthpart-overlay.active .stats-particle:nth-child(4) {
-  left: 50%;
-  animation-delay: 1s;
-  animation-duration: 3.5s;
-}
-
-.fifthpart-overlay.active .stats-particle:nth-child(5) {
-  left: 70%;
-  animation-delay: 1.5s;
-  animation-duration: 4.5s;
-}
-
-.fifthpart-overlay.active .stats-particle:nth-child(6) {
-  left: 90%;
-  animation-delay: 2s;
-  animation-duration: 3.8s;
-}
-
-@keyframes floatParticle {
-  0% {
-    transform: translateY(100%) scale(0);
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-150vh) scale(1.5);
-    opacity: 0;
-  }
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .fifthpart-content {
-    padding: 60px 20px;
+  .fifthpart {
+    padding: 60px 4%;
   }
 
   .stats-container {
     gap: 30px;
-
   }
 
   .stat-card {
@@ -928,8 +783,30 @@ body {
     min-width: 240px;
   }
 
-  .stat-icon {
+  .stat-number {
     font-size: 48px;
+  }
+
+  .stat-label {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fifthpart {
+    padding: 40px 3%;
+  }
+
+  .stats-container {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .stat-card {
+    padding: 35px 45px;
+    min-width: 200px;
+    width: 100%;
+    max-width: 320px;
   }
 
   .stat-number {
@@ -937,6 +814,6 @@ body {
   }
 
   .stat-label {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
